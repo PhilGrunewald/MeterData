@@ -1,0 +1,258 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Further information &#8212; Meter ASAP documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Data" href="data.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/meter_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Further information</a><ul>
+<li><a class="reference internal" href="#data-processing">Data Processing</a></li>
+<li><a class="reference internal" href="#data-validation">Data Validation</a></li>
+<li><a class="reference internal" href="#missing-data">Missing Data</a></li>
+<li><a class="reference internal" href="#possible-errors">Possible errors</a></li>
+<li><a class="reference internal" href="#limitations-to-interpretation-of-activity-data">Limitations to interpretation of Activity data</a></li>
+<li><a class="reference internal" href="#nuances-and-sample-usage">Nuances and Sample Usage</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="data.html" title="previous chapter">Data</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/stats.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="further-information">
+<h1>Further information<a class="headerlink" href="#further-information" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="data-processing">
+<h2>Data Processing<a class="headerlink" href="#data-processing" title="Permalink to this headline">¶</a></h2>
+<p><strong>Processing electricity data</strong></p>
+<p>The electricity data is collected by the eMeter at 1 second resolution. For faster data processing the data is downsampled to 1 minute and 10 minute readings and stored in two additional tables:</p>
+<ul class="simple">
+<li><strong>Electricity_1min</strong></li>
+<li><strong>Electricity_10min</strong></li>
+</ul>
+<p>An even coarser resolution is avalable from a View named <strong>El_hour</strong>. This is computed on the fly from <strong>Electricity_10min</strong>.</p>
+<p>Faulty readings can in most cases be removed by excluding values where <code class="docutils literal notranslate"><span class="pre">Watt</span></code> &lt; 20 Watt</p>
+<p id="activities"><strong>Processing activity data</strong></p>
+<p>Activity records are stored as a json record and consist of the following data:</p>
+<ul class="simple">
+<li>Key: constructed from the time of the activity (for sorting purposes) and a unique component (to distinguish activities performed at the same time)</li>
+<li>Time use code: 4 digit code from 144 pre-coded activities</li>
+<li>Time of reporting: when the record was created</li>
+<li>Time of activity: when the activity is reported to have taken place</li>
+<li>Location</li>
+<li>Number of other people</li>
+<li>Enjoyment</li>
+<li>Path: a comma separated list of all buttons pressed as part of the entry sequence.</li>
+</ul>
+<p>Participants enter activities using a dedicated app. Processing involves deconstructing the information received about an activity from the app, and populating the fields in the Activities table. Each record in the <strong>Activities</strong> table corresponds to an activity entry by the user.</p>
+<p>An activity entry consists of specifying location, time, actual activity, enjoyment, and people. Users either enter new activities, or edit/delete/rename existing ones. The possible sequence of button presses allowed by the app are given by the app files <em>screens.json</em> and <em>activities.json</em>.</p>
+<p>The corresponding activity record in the <strong>Activities</strong> table is a result of processing the activity entry. The app outputs the following information about an activity entry: the time of entering or modifying the activity, and the sequence of buttons the user pressed to record it. The former is the <em>time of recording</em>, and it is stored in the <code class="docutils literal notranslate"><span class="pre">dt_recorded</span></code> field. The latter corresponds to the raw, unprocessed <em>path</em>, and is stored in <code class="docutils literal notranslate"><span class="pre">path</span></code>. These two fields are taken from the app without processing. All the other fields in the Activities table are derived from the original sequence of buttons that is subsequently stored in <em>path</em>. These fields are <code class="docutils literal notranslate"><span class="pre">dt_activity</span></code>, <code class="docutils literal notranslate"><span class="pre">tuc</span></code>, <code class="docutils literal notranslate"><span class="pre">activity</span></code>, <code class="docutils literal notranslate"><span class="pre">category</span></code>, <code class="docutils literal notranslate"><span class="pre">location</span></code>, <code class="docutils literal notranslate"><span class="pre">people</span></code>, and <code class="docutils literal notranslate"><span class="pre">enjoyment</span></code>. The final TUC associated with the actual activity is given under <code class="docutils literal notranslate"><span class="pre">tuc</span></code>, its description from <em>activities.json</em> is shown under <code class="docutils literal notranslate"><span class="pre">activity</span></code>, and its category from <em>activities.json</em> under <code class="docutils literal notranslate"><span class="pre">category</span></code>.</p>
+<p>A path can be thought of as a sequence of Time-Use Codes (TUCs), each of which corresponds to a button. Some TUCs are app-specific, like the code used to set the activity time back 10 minutes. Others are more universal, and shared in the time-use literature, like the TUC for Personal activities (‘0’). The exact correspondence between the TUC and what it means, and also how it appears to user in the app, can be found in <em>activities.json</em>. It is using this file that the python code converts relevant parts of the activity entry into appropriate fields of the database record.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">activity</span></code> field entry can sometimes contain one or more <em>(end)</em> at the end of it. Each <em>(end)</em> corresponds to the participant pressing the <cite>END</cite> button in the app in order to report that that activity has ended. Note that the ending of the activity gets a separate record in the <strong>Activities</strong> table.</p>
+<p>Some activities, whose <code class="docutils literal notranslate"><span class="pre">Meta_idMeta</span></code> appears as <code class="docutils literal notranslate"><span class="pre">idMeta</span></code> in the <strong>Meta</strong> table with the corresponding <code class="docutils literal notranslate"><span class="pre">DataType</span></code> = <em>E</em>, correspond to a participant entering information about the possible appliances in use during a particular hour associated with that household’s electricity reading (see <span class="xref std std-ref">post-assignment</span>). These activities by definition pertain only to some limited set of appliances, and therefore cannot have meaningful data in the fields of <code class="docutils literal notranslate"><span class="pre">path</span></code>, <code class="docutils literal notranslate"><span class="pre">enjoyment</span></code>, <code class="docutils literal notranslate"><span class="pre">location</span></code>, <code class="docutils literal notranslate"><span class="pre">people</span></code>. The time of the appliance these activities reference is meant to represent the <em>hour</em> at which these were (switched) on, rather than the exact time. As such these are qualitatively different activities to those whose <code class="docutils literal notranslate"><span class="pre">Meta_idMeta</span></code> is associated with an <em>A</em> in the <strong>Meta</strong> table. Without the <strong>Meta</strong> table it is impossible to tell these appliance-related activities from activities entered through the diary/app.</p>
+</div>
+<div class="section" id="data-validation">
+<h2>Data Validation<a class="headerlink" href="#data-validation" title="Permalink to this headline">¶</a></h2>
+<p><strong>Household Survey</strong></p>
+<p>We take what is reported as a given. While it is theoretically possible to use the electricity readings to infer the presence (from use) of this or that particular type of appliance, METER’s project aim is <em>not</em> to give appliance-related descriptions of households; the role of the Household Survey is to give a necessary, rather than a sufficient, description. Thus, if a participant reports their household having washing machine, this is taken to be the ground truth.</p>
+<p>The survey answers admit one self-consistency check. The sum of people across all the different age-groups should be the same as the <cite>total number of people</cite> question.</p>
+<p><strong>Cross-validation of activity and electricity data</strong>
+Verifying the accuracy of self reported activities is inherently difficult. &#64;Gershuny17a claim that their validity is not in doubt and use objective instruments, including video footage, to support this assertion by comparing the total duration of activities reported and observed. For their sample of 131 people, only TV, eating and reading diverge between the video footage and the diaries. Surprisingly, the amount of time watching TV is over-reported and reading is under-reported, each by nearly 10%. This is contrary to the expectation that non-desirable activities get under-reported and more desirable ones over-reported.</p>
+<p>Reporting of ‘hot drink’ related activities, when carried out at home, lends themselves to testing the accuracy of the activity records used here. Such activities are reported frequently and the performance of the activity is broadly neutral in terms of social desirability. 53% of individuals and 73% of households report making a hot drink or use of a kettle during their day at least once.</p>
+<p>Coincidence of electrical load signature of a kettle with the reporting of a ‘hot drink’ like activity</p>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/kettle_profiles.png"><img alt="_images/kettle_profiles.png" src="_images/kettle_profiles.png" style="width: 468.0px; height: 508.4px;" /></a>
+</div>
+<p>The electricity signature of a kettle is very distinct and usually short lived, such that it provides a helpful marker for temporal accuracy, as shown in the illustrative examples in Figure 2. It is less suitable as a test for false negatives. If a hot drink has been reported and no kettle signature can be detected it could either be that the activity was reported wrongly or too inaccurately time-wise, or that the hot drink did not involve an electric kettle, but for instance a gas fired kettle. This is the case for 26% of events.</p>
+<p>For all other cases the time difference $d_t$ of the reported activity and the corresponding kettle signature can be compared. A histogram of the error between the two events is shown in Figure 3.</p>
+<p>Error between reporting of kettle signature in load profile (N=130)</p>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/hist_kettle_reporting_N130.png"><img alt="_images/hist_kettle_reporting_N130.png" src="_images/hist_kettle_reporting_N130.png" style="width: 384.0px; height: 272.4px;" /></a>
+</div>
+<p>In over 67% of cases the reporting accuracy is within 10 minutes of the observed electricity signature. Narrowing the scope to explicit reporting of the appliance ‘kettle’ itself improves this figure to 80%.</p>
+<p>The high quality of temporal alignment between activities and their associated appliances arising from this collection method allows us to broaden the analysis to activities that are less directly associated with an easy to identify appliance. Kettles have a very prominent signature due to their high power and short use periods. In energy terms they are rather less significant and we therefore consider more energy intensive activities and appliances in the following section.</p>
+</div>
+<div class="section" id="missing-data">
+<h2>Missing Data<a class="headerlink" href="#missing-data" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The Household Survey does not contain any missing data by virtue of being an integral part of the signing up process: the data selection comes the end, meaning that incomplete answers cannot result in the household taking part in the study</li>
+<li>Electricity consumption on the raw, 1 second resolution, contains some missing datapoints, leading the corresponding lower resolution tables to have missing data as well.</li>
+<li>Individual survey:  individual surveys are accessed through the a-meter. Consequently, it is possible that some individuals do not fill in their surveys. At this point it is impossible to say whether they are missing completely at random, and indeed, some correlation between the diligence in entering activities, and in filling in the individual survey, is somewhat expected.</li>
+<li>Post-entered activities. Once again, entering these is not a requirement. Consequently some households will not do so.</li>
+</ul>
+</div>
+<div class="section" id="possible-errors">
+<h2>Possible errors<a class="headerlink" href="#possible-errors" title="Permalink to this headline">¶</a></h2>
+<p><strong>Electricity</strong></p>
+<ul>
+<li><p class="first">An improperly attached current clamp, leading to incorrect electricity readings.</p>
+<p>It is the responsibility of the participants to properly attach the e-meter to the correct cable. In most cases it is a straight-forward task, particularly if the electricity meter is easy to access. However, METER has already noted the following exceptions:</p>
+<blockquote>
+<div><ul class="simple">
+<li>existence of more than one electricity meter per household</li>
+<li>cables tied together, or there being more or fewer cables than 4</li>
+</ul>
+</div></blockquote>
+<p>The participant could then attach the e-meter to the wrong cable, the wrong meter, or not close the current clamp properly - all of which would lead to wrong, low, or incomplete electricity readings.</p>
+<p>Incomplete or low readings are hard to monitor. The METER team assesses the <em>correctness</em> of the readings by eye, and if they look too low, then the usual procedure is to follow that up with the participants. However, since this criteria is a matter of judgement, it is possible that some low readings which the team took to be correct, are actually underestimating the usage.</p>
+<p>In the majority of cases, however, a wrong reading looks obvious, and such data is set the quality of 0.</p>
+</li>
+<li><p class="first">An integrated PV setup, leading to electricity readings that are <em>net</em> of usage and production.</p>
+</li>
+<li><p class="first">A short electricity household reading, resulting from attaching the current clamp too late, or removing it too early.</p>
+</li>
+<li><p class="first">A faulty e-meter that consistently under/over-estimates the actual values.</p>
+</li>
+<li><p class="first">The e-meter does not take into account the appliance’s power factor. This might lead to slight over/under-estimation of the power used by that appliance. [TO DO: do we have any idea of the error?] It would also be correct to say that, since the power factor is appliance-dependent, the readings are not strictly a faithful representation of the relative electricity consumption within a household. We accept this potential source of error as at the time of the study such lack of correctives for the power factor is not only typical of commercial-standard smart meters, but is also the standard of the industry, featuring in smart meters distributed by large scale electricity providers. Thus, METER’s e-meter represents the latest standard.</p>
+</li>
+<li><p class="first">Multiple readings for any given time, for any given e-Meter. Such readings will still appear as different entries each with its own idElectricity. This has been known to happen, and identical entries exist for households whose e-Meter data had been entered (transferred into the database) twice by mistake. It should <em>not</em> be possible to have <em>different</em> readings for the same households - TODO we need to check that we don’t have that. _Please let the METER team know should you happen to find any such cases._</p>
+</li>
+<li><p class="first">Some e-readings will have been assigned a Quality of 1 when they should have Quality of 0.</p>
+</li>
+</ul>
+<p><strong>Household Survey</strong></p>
+<ul>
+<li><p class="first">Wrong answers entered by mistake or lack of knowledge</p>
+<p>Apart from the number of people mentioned above [TO DO: link], there is no general procedure to catch this.</p>
+</li>
+<li><p class="first">Subsequent modifications of the household information by participants</p>
+<p>Participants might modify their answers to the Household questionnaire at any time by clicking on the original link sent to the by email, and going backwards in the questionnaire. The version given with the data therefore corresponds to the version of the answers at the date of data download, rather than the day the household filled in the questionnaire originally.</p>
+</li>
+</ul>
+<p><strong>Activities</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>Some, particularly the paper-diary related, records might have erroneous values like -1 in the enjoyment and number of people fields</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="limitations-to-interpretation-of-activity-data">
+<h2>Limitations to interpretation of Activity data<a class="headerlink" href="#limitations-to-interpretation-of-activity-data" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Each adult over the age of 8 is assigned a meta ID. Before the app, when activities were entered using paper diaries, this meta ID was written on top of the diary sent to the participants. If diaries were returned empty, no record of that meta ID was deposited into the database - unlike a complete empty app, which will show up as a record in the Meta table, but not in the Activities table.</li>
+<li>Number of activities carried out.
+Care should be taken before drawing direct relation between the number of reported and actual activities carried out by the participants. Experimental tiredness, a decrease in reporting frequency in the duration of the study is a known effect [TO DO: refs?]. METER’s data is subject to its effects as well, with TO DO: stats of first and second day</li>
+<li>Activity duration.
+Meter takes the analytic approach to Time Use (see LINK TO SECTION ON METHODOLOGY). The self-reported activities collected by the study are localised in time. The setup makes no suggestions as to the type and frequency of activities that should be reported, implying that activities can potentially overlap. Consequently, there is no case to be made to associate the time between successively reported activities and their duration. Some durations, of course, are obvious: the first activity in the morning puts an upper limit on the duration of sleep (if going to bed had been reported); similarly, boiling the kettle can only take so long; and some activities are fundamentally exclusive (having a shower and watching TV). The only explicit duration that can be inferred without looking at the particulars of the activity is if the activity has been reported to have ended. However, this has its limits, in the particulars of the ‘end’-type activity, there is no reference as to which that activity was an ‘end’ to.</li>
+<li>Recording time.
+The interpretation of the <cite>dt_recording</cite>, the time of the recording of the activity, varies depending on whether that activity was recorded by the participant in the app or in the paper diary. In case of the latter, it is the METER researchers that later transcribed the user’s activity using the app. Therefore, for paper diaries, time of recording refers to the time in which that activity was transcribed. If plotted, they will appear to be clustered. This has important limitations on the time between recording and activity - for paper diaries, this time does not have a meaning.</li>
+<li>Path for paper diaries.
+The path for paper diaries is the sequence of buttons pressed by the METER researchers when entering that activity. Because of the way paper diaries were transcribed, such paths would contain a lot of 10K (time setting) codes.</li>
+</ul>
+<p>While the spirit of the study remained consistent, the actual app files underwent several modifications throughout. The result is that the possible paths available to the user changes in time. In addition to that, the data processing functions have also been modified. Therefore care should be taken when comparing activities in time. We detail these legacy limitations below.</p>
+<ul class="simple">
+<li>The categorisation of the final TUC, and the subsequent entry into the <cite>category</cite> field in the Activities table, is done based on the categorisation of that TUC in the activities.json file in use at the time. It might change depending on the version of the .json file used.</li>
+<li>The ‘EDIT’ mode allows users to report ending an activity. Activating it creates a separate line in a list of already reported activities visible to the user, except for this activity is clearly denoted with an (‘end’ or ‘END’). Consequently, only the existing activities could be reported to have ended. However, because the design of the app makes this into an activity in its own right, it becomes delinked from the original ‘starting’ activity. It is therefore theoretically possible that users delete the original activity, leaving only the ‘end’-type activity. Furthermore, since the use of the button is voluntary, whether or not to use it becomes an individual preference.</li>
+<li>The ‘end’ button has only become available to users in March 2017.</li>
+<li>Path length. The number of character allowed for storing path in the activity record gradually increased from 100, to 300, and finally to 600 on 2/3/17 (accommodating around 80 entries).</li>
+<li>Path deletion when editing activities. Prior to $3/3/17$, on importing data into the database, paths for edited activities were disguarded, with only the [EDIT code + possible 10K codes] remaining. The missing data has been partially reconstructed, but such ‘lone’ paths can still be found in the database.</li>
+<li>It might still be possible to find some activities that were deleted by the user, but did not get deleted in the database.</li>
+<li>Prior to $3/3/17$, an activity can be an END-type activity, and yet not have an end code of 11005 in the path, its path with an end-code being overwritten by a new edit.</li>
+<li>Another change had been made sometime in early 2017. When pressing ‘repeat’, whether ‘now’ or ‘recently’, users could enter new ENJ and PPL. Therefore, some paths with EDIT tucs will contain one or more ENJ and PPL codes.</li>
+<li>For older experiments where participants used a paper diary, each activity was subsequently entered into the app, and uploaded onto the database in the usual manner. Since it is possible that a single handwritten activity was encoded using two activities in the app, thereby producing two distinct records in the database, these records in <strong>Activities</strong> do not necessarily correspond one to one with each activity written down in the diary.</li>
+</ul>
+</div>
+<div class="section" id="nuances-and-sample-usage">
+<h2>Nuances and Sample Usage<a class="headerlink" href="#nuances-and-sample-usage" title="Permalink to this headline">¶</a></h2>
+<p>This is old text, with old Quality fields - to check before submission.</p>
+<ol class="arabic simple">
+<li>From how many participants do we have activity records?</li>
+</ol>
+<p>Counting the number of unique entries in <cite>Meta_idMeta</cite> in <strong>Activities</strong> would not give the number of participants. Counting the number of unique entries in <cite>idMeta</cite> in <strong>Meta</strong> with <cite>DataType</cite> = <em>A</em> would.</p>
+<ol class="arabic simple" start="2">
+<li>Which household is behind an electricity reading?</li>
+</ol>
+<p>Electricity readings associated with a household are identified by the field <cite>Meta_idMeta</cite> in the <cite>Electricity</cite> table. Households are identified by <cite>idHousehold</cite> in the <cite>Household</cite> table. The table linking these two keys is the <cite>Meta</cite> table.</p>
+<ol class="arabic simple" start="5">
+<li>What is the fraction of badly filled-in activity records?</li>
+</ol>
+<p>We define a bad activity record as one with not enough information to constitute a valid activity record. If activities were recorded using an app, the signature for this is <cite>Quality</cite> of 0 in the <strong>Meta</strong> table next to a <cite>DataType</cite> of A. However, returned empty diaries get no record. To find the number of <cite>bad</cite> diaries in a household, we need to subtract the number of <cite>good</cite> activity records as defined above <em>from the total number of adults in the given household</em>, which can be found by adding up all the age groups for that household from the <strong>Household</strong> table. In other words, simply counting the number of <cite>Quality</cite> 0 readings would underestimate the number of <cite>bad</cite> activity records.</p>
+<ol class="arabic simple" start="3">
+<li>Does household x have a washing machine?</li>
+</ol>
+<p>The presence/absence/number of a particular appliance in a household x is given by the value in the relevant appliance field of a record with <cite>idHousehold</cite> = x in the <strong>Household</strong> table. We need to find out what is the relevant appliance field, and be able to interpret its entry. The meaning of fields in <strong>Household</strong> that come directly out of the questionnaire are given under the <cite>col</cite> field in the <strong>Legend</strong> table with the <cite>tab</cite> set to <cite>Household</cite>. The meaning of non self-explanatory fields is described in the <strong>Legend</strong> table where <cite>value</cite> is <em>q</em>. We therefore look for a record in <strong>Legend</strong> with the <cite>tab</cite> set to <cite>Household</cite>, <cite>value</cite> is <em>q</em>, and <cite>meaning</cite> includes the words ‘washing machine’. The corresponding <cite>col</cite> field in that record gives the name of the relevant field in <strong>Household</strong>, which in this case is <cite>appliance_b1</cite>. The possible answers and their meaning are again given by the field <cite>value</cite> in the record in <strong>Legend</strong> with the <cite>tab</cite> set to <cite>Household</cite>, and <cite>col</cite> to <cite>appliance_b1</cite>.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2018, Marina Diakonova.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/stats.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
