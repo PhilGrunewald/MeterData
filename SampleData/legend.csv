@@ -1,0 +1,938 @@
+idLegend,tab,col,value,meaning
+194,Household,bill_monthly,1,"Monthly figure"
+195,Household,bill_monthly,0,"Annual figure"
+196,Household,bill_monthly,q,"Switch to monthly amounts if you prefer"
+197,Household,own,1,"Own, With or without a mortgage"
+198,Household,own,q,"Your property. Do you own or rent your proper"
+199,Household,own,3,"Rent, Private landlord"
+200,Household,own,2,"Rent, Social landlord"
+201,Household,people,q," How many people live at this address? "
+202,Household,people,1,"1, just me"
+203,Household,people,0,N/A
+204,Household,people,3,"3 people"
+205,Household,people,2,"2 people"
+206,Household,people,5,"5 people"
+207,Household,people,4,"4 people"
+208,Household,people,6,"6 or more"
+209,Household,rooms,q,"Rooms. How many rooms does your home have? No"
+210,Household,rooms,1,"1 room"
+211,Household,rooms,3,"3 rooms"
+212,Household,rooms,2,"2 rooms"
+213,Household,rooms,5,"5 rooms"
+214,Household,rooms,4,"4 rooms"
+215,Household,rooms,6,"6 or more"
+216,Household,provider,oth,Other
+217,Household,provider,coop,"The co-operative"
+218,Household,provider,edf,EDF
+219,Household,provider,eco,Ecotricity
+220,Household,provider,sp,"Scottish Power"
+221,Household,provider,eon,e-On
+222,Household,provider,q,"Your electricity provider. Who provides your "
+223,Household,provider,good,"Good Energy"
+224,Household,provider,bg,"British Gas"
+225,Household,provider,sse,SSE
+226,Household,provider,npower,nPower
+227,Household,quality,1,OK
+228,Household,quality,0,none
+229,Household,bill_uncertain,1,"Not sure"
+230,Household,bill_uncertain,0,N/A
+231,Household,bill_uncertain,q,"Not sure (about the bill amount)"
+232,Household,p6pm,q,"Who's at home?. On a typical weekday, how man"
+233,Household,p6pm,1,"1 person"
+234,Household,p6pm,0,Nobody
+235,Household,p6pm,3,"3 people"
+236,Household,p6pm,2,"2 people"
+237,Household,p6pm,5,"5 or more"
+238,Household,p6pm,4,"4 people"
+239,Household,page_number,19,"p19 Completed"
+240,Household,page_number,0,"Not started"
+241,Household,page_number,q,"At which page did completion stop?"
+242,Household,page_number,17,"p17 Completed"
+243,Household,page_number,18,"p18 Completed"
+244,Household,appliance_bo,q,"Your appliances.  How about these things? Cli"
+245,Household,income,q,"Income. What is your household income? . "
+246,Household,income,1,"up to 15,000 / 1,000"
+247,Household,income,3,"up to 35,000 / 2,000"
+248,Household,income,2,"up to 25,000 / 1,500"
+249,Household,income,5,"up to 70,000 / 4,000"
+250,Household,income,4,"up to 50,000 / 3,000"
+251,Household,income,6,"Over 70,000 / 4,000"
+252,Household,bill_range,q,"Your electricity bill. How much do you spend "
+253,Household,bill_range,1,"300/ 25"
+254,Household,bill_range,0,N/A
+255,Household,bill_range,3,"550/ 46"
+256,Household,bill_range,2,"400/ 33"
+257,Household,bill_range,5,"850/ 71"
+258,Household,bill_range,4,"700/ 58"
+259,Household,bill_range,6,"850/ 71"
+260,Household,age_group5,q,"Age 51 - 70"
+261,Household,age_group4,q,"Age 35 - 50"
+262,Household,age_group6,q,"Over 70"
+263,Household,age_group1,q,"Under 8"
+264,Household,age_group3,q,"Age 19 - 34"
+265,Household,age_group2,q,"Age 8 - 18"
+266,Household,appliance_b10,1,Yes
+267,Household,appliance_b10,0,No
+268,Household,appliance_b10,q,"Solar thermal"
+269,Household,appliance_b11,1,Yes
+270,Household,appliance_b11,0,No
+271,Household,appliance_b11,q,"Electric car"
+272,Household,pet2,q,Cat
+273,Household,appliance5,q,"Power shower (number of)"
+274,Household,appliance4,q,"Night storage heaters (number of)"
+275,Household,appliance7,q,"Not asked"
+276,Household,appliance6,q,"TV/Computer screens (number of)"
+277,Household,appliance1,q,"Dehumidifyer (number of)"
+278,Household,appliance3,q,"Portable heaters (number of)"
+279,Household,appliance2,q,"Air conditioner (number of)"
+280,Household,house_type,q,"Your home. What type of house do you live in?"
+281,Household,house_type,1,"Flat apartment"
+282,Household,house_type,3,"Semi-detached house"
+283,Household,house_type,2,"Detached house"
+284,Household,house_type,5,"Bungalow house"
+285,Household,house_type,4,"Terraced house"
+286,Household,house_type,6,Other
+287,Household,tariff,q,"Your tariff. Which of these best describes yo"
+288,Household,tariff,1,Standard
+289,Household,tariff,3,"Economy 7"
+290,Household,tariff,2,Green
+291,Household,tariff,5,"Don't know"
+292,Household,tariff,4,"Economy 10"
+293,Household,tariff,6,Other
+294,Household,appliance8,q,"Not asked"
+295,Household,status,11,"11 No data returned"
+296,Household,status,10,"10 Data Error"
+297,Household,status,31,"31 Await new date"
+298,Household,status,1,"1 No date selected"
+299,Household,status,0,"0 Survey incomplete"
+300,Household,status,3,"3 Await confirm"
+301,Household,status,2,"2 Date selected"
+302,Household,status,-1,"-1 Date never used (changed by user)"
+303,Household,status,4,"4 Confirmed participation"
+304,Household,status,7,"7 Received graph"
+305,Household,status,6,"6 Data processed"
+306,Household,status,5,"5 Kit issued"
+307,Household,status,8,"8 Made annotations"
+308,Household,appliance_b8,1,Yes
+309,Household,appliance_b8,0,No
+310,Household,appliance_b8,q,"Electricity display"
+311,Household,appliance_b9,1,Yes
+312,Household,appliance_b9,0,No
+313,Household,appliance_b9,q,"PV panels"
+314,Household,appliance_b2,1,Yes
+315,Household,appliance_b2,0,No
+316,Household,appliance_b2,q,"Tumble dryer"
+317,Household,appliance_b3,1,Yes
+318,Household,appliance_b3,0,No
+319,Household,appliance_b3,q,"Washer dryer"
+320,Household,appliance_b1,1,Yes
+321,Household,appliance_b1,0,No
+322,Household,appliance_b1,q,"Washing machine"
+323,Household,appliance_b6,1,Yes
+324,Household,appliance_b6,0,No
+325,Household,appliance_b6,q,"Heat pump"
+326,Household,appliance_b7,1,Yes
+327,Household,appliance_b7,0,No
+328,Household,appliance_b7,q,"Electric hob"
+329,Household,appliance_b4,1,Yes
+330,Household,appliance_b4,0,No
+331,Household,appliance_b4,q,"Under floor heating"
+332,Household,appliance_b5,1,Yes
+333,Household,appliance_b5,0,No
+334,Household,appliance_b5,q,"Gas boiler"
+335,Household,pet4,q,"Other pet"
+336,Household,pet1,q,Dog
+337,Household,pet3,q,Fish
+338,Household,inc_monthly,1,"Monthly figure"
+339,Household,inc_monthly,0,"Annual figure"
+340,Household,inc_monthly,q,"Switch to monthly amounts if you prefer"
+341,Household,date_choice,q,"Which day would suit you for this trial?.  Ap"
+342,Household,bill_affordable,1,"Not affordable, I struggle to pay"
+343,Household,bill_affordable,q,"How affordable do you find your electricity?."
+344,Household,bill_affordable,3,"Affordable, I can pay"
+345,Household,bill_affordable,2,"Somewhat affordable , I must budget"
+346,Household,bill_affordable,4,"Very affordable, I can pay easily"
+347,Individual,TimeExercise,q,"On a typical weekday, how much time do you sp"
+348,Individual,TimeExercise,None,Null
+349,Individual,TimeExercise,1,None
+350,Individual,TimeExercise,0,Null
+351,Individual,TimeExercise,3,"30min or less"
+352,Individual,TimeExercise,2,"10min or less"
+353,Individual,TimeExercise,5,"3h or less"
+354,Individual,TimeExercise,4,"1h or less"
+355,Individual,TimeExercise,6,"Over 3h"
+356,Individual,Age_range,q,"What age group are you?"
+357,Individual,Age_range,None,Null
+358,Individual,Age_range,1,"8 - 18"
+359,Individual,Age_range,0,Null
+360,Individual,Age_range,3,"35 - 50"
+361,Individual,Age_range,2,"19 - 34"
+362,Individual,Age_range,5,"Over 70"
+363,Individual,Age_range,4,"51 - 70"
+364,Individual,Age_range,6,Skip
+365,Individual,TimeMobile,q,"On a typical weekday, how much time do you sp"
+366,Individual,TimeMobile,None,Null
+367,Individual,TimeMobile,1,None
+368,Individual,TimeMobile,0,Null
+369,Individual,TimeMobile,3,"30min or less"
+370,Individual,TimeMobile,2,"10min or less"
+371,Individual,TimeMobile,5,"2h or less"
+372,Individual,TimeMobile,4,"1h or less"
+373,Individual,TimeMobile,6,"Over 2h"
+374,Individual,TimeScreens,q,"On a typical weekday, how much time do you sp"
+375,Individual,TimeScreens,None,Null
+376,Individual,TimeScreens,1,None
+377,Individual,TimeScreens,0,Null
+378,Individual,TimeScreens,3,"1 hour or less"
+379,Individual,TimeScreens,2,"30 min or less"
+380,Individual,TimeScreens,5,"3 hours or less"
+381,Individual,TimeScreens,4,"2 hours or less"
+382,Individual,TimeScreens,6,"Over 3 hours"
+383,Individual,Gender,q,"What gender are you?"
+384,Individual,Gender,None,Null
+385,Individual,Gender,1,Female
+386,Individual,Gender,0,Skip
+387,Individual,Gender,3,Other
+388,Individual,Gender,2,Male
+389,Individual,TimeCooking,q,"On a typical weekday, how much time do you sp"
+390,Individual,TimeCooking,None,Null
+391,Individual,TimeCooking,1,None
+392,Individual,TimeCooking,0,Null
+393,Individual,TimeCooking,3,"30min or less"
+394,Individual,TimeCooking,2,"10min or less"
+395,Individual,TimeCooking,5,"3h or less"
+396,Individual,TimeCooking,4,"1h or less"
+397,Individual,TimeCooking,6,"Over 3h"
+398,Individual,WorkingHours,q,"How many hours do you work per week?"
+399,Individual,WorkingHours,None,Null
+400,Individual,WorkingHours,1,None
+401,Individual,WorkingHours,0,Null
+402,Individual,WorkingHours,3,"16 - 30"
+403,Individual,WorkingHours,2,"1 - 15"
+404,Individual,WorkingHours,5,"Over 45"
+405,Individual,WorkingHours,4,"31 - 45"
+406,Individual,WorkingHours,6,Skip
+407,Individual,BillContributer,q,"Do you pay the electricity bills?"
+408,Individual,BillContributer,None,Null
+409,Individual,BillContributer,1,"Yes, I do"
+410,Individual,BillContributer,0,Null
+411,Individual,BillContributer,3,"I don't"
+412,Individual,BillContributer,2,"I contribute"
+413,Individual,BillContributer,4,"Other / Skip"
+414,Individual,UseShower,q,"In the last 7 days,  did you use a   Shower ?"
+415,Individual,UseShower,None,Null
+416,Individual,UseShower,1,"I didn't"
+417,Individual,UseShower,0,Null
+418,Individual,UseShower,3,Twice
+419,Individual,UseShower,2,Once
+420,Individual,UseShower,5,"5 - 7 times"
+421,Individual,UseShower,4,"3 - 4 times"
+422,Individual,UseShower,6,"8 or more"
+423,Individual,UseTumbleDryer,q,"In the last 7 days,  did  you personally  use"
+424,Individual,UseTumbleDryer,None,Null
+425,Individual,UseTumbleDryer,1,"I didn't"
+426,Individual,UseTumbleDryer,0,Null
+427,Individual,UseTumbleDryer,3,Twice
+428,Individual,UseTumbleDryer,2,Once
+429,Individual,UseTumbleDryer,5,"5 - 7 times"
+430,Individual,UseTumbleDryer,4,"3 - 4 times"
+431,Individual,UseTumbleDryer,6,"8 or more"
+432,Individual,WorkRegularity,q,"Are these hours always the same?"
+433,Individual,WorkRegularity,None,Null
+434,Individual,WorkRegularity,1,"Always the same"
+435,Individual,WorkRegularity,0,Null
+436,Individual,WorkRegularity,3,"Flexible to suit me"
+437,Individual,WorkRegularity,2,"Variable to suit work"
+438,Individual,WorkRegularity,4,Skip
+439,Individual,UseVacuumCleaner,q,"In the last 7 days,  did you use a   Vacuum C"
+440,Individual,UseVacuumCleaner,None,Null
+441,Individual,UseVacuumCleaner,1,"I didn't"
+442,Individual,UseVacuumCleaner,0,Null
+443,Individual,UseVacuumCleaner,3,Twice
+444,Individual,UseVacuumCleaner,2,Once
+445,Individual,UseVacuumCleaner,5,"5 - 7 times"
+446,Individual,UseVacuumCleaner,4,"3 - 4 times"
+447,Individual,UseVacuumCleaner,6,"8 or more"
+448,Individual,Income,q,"Roughly, what is your annual income?"
+449,Individual,Income,None,Null
+450,Individual,Income,1,"GBP 0 -  GBP 10,000"
+451,Individual,Income,0,Null
+452,Individual,Income,3,"up to  GBP 30,000"
+453,Individual,Income,2,"up to  GBP 20,000"
+454,Individual,Income,5,"Over GBP 45,000"
+455,Individual,Income,4,"up to  GBP 45,000"
+456,Individual,Income,6,Skip
+457,Individual,UseDishwasher,q,"In the last 7 days,  did  you personally  use"
+458,Individual,UseDishwasher,None,Null
+459,Individual,UseDishwasher,1,"I didn't"
+460,Individual,UseDishwasher,0,Null
+461,Individual,UseDishwasher,3,Twice
+462,Individual,UseDishwasher,2,Once
+463,Individual,UseDishwasher,5,"5 - 7 times"
+464,Individual,UseDishwasher,4,"3 - 4 times"
+465,Individual,UseDishwasher,6,"8 or more"
+466,Individual,UseWashingMachine,q,"In the last 7 days,  did  you personally  use"
+467,Individual,UseWashingMachine,None,Null
+468,Individual,UseWashingMachine,1,"I didn't"
+469,Individual,UseWashingMachine,0,Null
+470,Individual,UseWashingMachine,3,Twice
+471,Individual,UseWashingMachine,2,Once
+472,Individual,UseWashingMachine,5,"5 - 7 times"
+473,Individual,UseWashingMachine,4,"3 - 4 times"
+474,Individual,UseWashingMachine,6,"8 or more"
+475,Individual,EnergyInterest,q,"How interested are you in energy issues?"
+476,Individual,EnergyInterest,None,Null
+477,Individual,EnergyInterest,1,"Very Interested"
+478,Individual,EnergyInterest,0,Null
+479,Individual,EnergyInterest,3,Somewhat
+480,Individual,EnergyInterest,2,Interested
+481,Individual,EnergyInterest,5,"Not at all"
+482,Individual,EnergyInterest,4,"Not very much"
+483,Individual,EnergyInterest,6,Skip
+484,Individual,WorkHome,q,"How often do you work from home?"
+485,Individual,WorkHome,None,Null
+486,Individual,WorkHome,1,Never
+487,Individual,WorkHome,0,Null
+488,Individual,WorkHome,3,Sometimes
+489,Individual,WorkHome,2,Rarely
+490,Individual,WorkHome,5,Always
+491,Individual,WorkHome,4,Often
+492,Individual,WorkHome,6,Skip
+493,Individual,Occupation,q,"What is your occupation?"
+494,Individual,Occupation,None,Null
+495,Individual,Occupation,1,Student
+496,Individual,Occupation,0,Null
+497,Individual,Occupation,3,"Self employed"
+498,Individual,Occupation,2,Employed
+499,Individual,Occupation,5,"Unemployed / retired"
+500,Individual,Occupation,4,"Volunteer / unpaid work"
+501,Individual,Occupation,6,"Other / Skip"
+502,Activities,tuc,5221,"Plays, musicals or pantomimes"
+504,Activities,tuc,9610,Exercise
+505,Activities,tuc,214,"Hot drink"
+506,Activities,time,11000,"Repeat now"
+507,Activities,tuc,8515,"Power tools"
+508,Activities,tuc,3190,"Prepare meal"
+509,Activities,survey,90071,BillContributer
+510,Activities,tuc,3725,"Shopping for&ordring mass media via the inter"
+511,Activities,tuc,3540,"Vehicle maintenance"
+512,Activities,tuc,3890,"Supervise child"
+513,Activities,tuc,9820,"Travel for day trip/ just walk"
+514,Activities,tuc,9231,"School run"
+515,Activities,tuc,3726,"Shopping for&ordring entertainment via the in"
+516,Activities,tuc,5245,"Reading newspapers in a library"
+517,Activities,tuc,3242,Pottering
+518,Activities,tuc,312,Bathing
+519,Activities,tuc,4000,"Volunteer work and meetings"
+520,Activities,tuc,2110,"Classes and lectures"
+521,Activities,tuc,3723,"Shopping for&ordring clothing via the interne"
+522,Activities,tuc,9720,"Travel related to hobbies other than gambling"
+523,Activities,tuc,3727,"Banking and bill paying via the internet"
+524,Activities,tuc,8575,"Do hair"
+525,Activities,tuc,4110,"Work for an organisation"
+526,Activities,time,10004,"activity time"
+527,Activities,tuc,5294,"Visiting a leisure park"
+528,Activities,enjoyment,20006,"enjoyment 5"
+529,Activities,tuc,8533,Microwave
+530,Activities,time,10003,"activity time"
+531,Activities,tuc,9810,"Travel to holiday base"
+532,Activities,tuc,8574,Shave
+533,Activities,tuc,7250,"Unspecified other computing"
+534,Activities,tuc,7130,"Literary arts"
+535,Activities,tuc,8581,"Work with machinery"
+537,Activities,tuc,8319,"Other specified radio listening"
+538,Activities,tuc,120,"Sick in bed"
+539,Activities,tuc,9232,"Child to/from sport"
+540,Activities,tuc,3520,"Repairs of house"
+541,Activities,tuc,7300,"Unspecified games"
+542,Activities,tuc,5249,"Other specified library activities"
+543,Activities,tuc,3131,"Clear away meal"
+544,Activities,tuc,4100,"Unspecified organisational work"
+545,Activities,tuc,3729,"Other specified household management using th"
+546,Activities,tuc,3313,"Laundry hanging"
+547,Activities,tuc,6141,"Indoor pairs or doubles games"
+548,Activities,tuc,5230,"Art exhibitions and museums"
+549,Activities,tuc,4274,"Accompanying the child as help"
+550,Activities,tuc,7240,"Unspecified communication by computer"
+551,Activities,tuc,3300,Laundry
+552,Activities,time,10006,"activity time"
+553,Activities,tuc,1120,"Work break"
+554,Activities,survey,90024,Age_range
+555,Activities,survey,90025,Age_range
+556,Activities,survey,90026,Age_range
+557,Activities,tuc,320,"Running a bath"
+558,Activities,survey,90021,Age_range
+559,Activities,survey,90022,Age_range
+560,Activities,survey,90023,Age_range
+561,Activities,tuc,8535,Kettle
+562,Activities,tuc,3912,"Being with others"
+563,Activities,tuc,7170,email
+564,Activities,people,30014,"location public place"
+565,Activities,tuc,3210,"Cleaning house"
+566,Activities,tuc,8537,"Bread maker"
+567,Activities,tuc,3133,"Dish washer"
+568,Activities,time,10309,"activity time"
+569,Activities,time,10310,"activity time"
+570,Activities,time,10311,"activity time"
+571,Activities,tuc,303,"Me time"
+572,Activities,tuc,6190,"Other specified physical exercise"
+573,Activities,survey,90012,Gender
+574,Activities,tuc,4210,"Food management as help to other households"
+575,Activities,tuc,3390,"Other specified making and care for textiles"
+576,Activities,tuc,-1,back
+577,Activities,time,10301,"activity time"
+578,Activities,survey,90000,"root: survey"
+579,Activities,tuc,9210,"Travel related to education"
+580,Activities,tuc,9620,"Travel related to hunting & fishing"
+581,Activities,tuc,4281,"Physical care and supervision of an adult as "
+582,Activities,tuc,8222,"Watching sport"
+583,Activities,tuc,3311,"Washing machine"
+584,Activities,tuc,3500,"Unspecified construction and repairs"
+585,Activities,tuc,3134,"Dish washing"
+586,Activities,tuc,3191,Food
+587,Activities,tuc,4300,"Unspecified participatory activities"
+588,Activities,tuc,8530,"Use kitchen appliance"
+589,Activities,survey,90305,UseTumbleDryer
+590,Activities,survey,90304,UseTumbleDryer
+591,Activities,tuc,7231,"Information searching on the internet"
+592,Activities,survey,90306,UseTumbleDryer
+593,Activities,survey,90301,UseTumbleDryer
+594,Activities,survey,90303,UseTumbleDryer
+595,Activities,survey,90302,UseTumbleDryer
+596,Activities,survey,90033,Occupation
+597,Activities,tuc,6000,"Outdoor activity"
+599,Activities,enjoyment,20004,"enjoyment 3"
+600,Activities,tuc,3819,"Physical care & supervision of a child"
+601,Activities,tuc,3615,"Window shopping or other shopping as leisure"
+602,Activities,tuc,3612,"Shopping mainly for clothing"
+603,Activities,tuc,4272,"Teaching the child as help"
+604,Activities,tuc,3241,"Looking for things"
+605,Activities,UNDEFINED,99999,
+606,Activities,tuc,8100,"Unspecified reading"
+607,Activities,tuc,5130,Celebrations
+608,Activities,people,30023,Driving
+609,Activities,tuc,313,Wash
+610,Activities,tuc,3611,"Shopping mainly for food"
+611,Activities,tuc,3914,"Accompanying an adult household member"
+612,Activities,tuc,301,"Getting ready"
+613,Activities,tuc,3531,"Woodcraft, metal craft, sculpture and pottery"
+614,Activities,tuc,8500,"Use an appliance"
+615,Activities,tuc,6001,"Outdoors eating"
+616,Activities,tuc,5200,"Unspecified entertainment and culture"
+617,Activities,tuc,3420,"Tending domestic animals"
+618,Activities,tuc,7390,"Other specified games"
+619,Activities,tuc,3135,"Lay table"
+620,Activities,tuc,304,"Got home"
+621,Activities,tuc,3290,"Other household upkeep"
+622,Activities,survey,90072,BillContributer
+623,Activities,time,10229,"activity time"
+624,Activities,tuc,7190,"Other specified or unspecified arts and hobbi"
+625,Activities,tuc,323,Bathing
+626,Activities,survey,90402,UseShower
+627,Activities,survey,90403,UseShower
+628,Activities,survey,90401,UseShower
+629,Activities,survey,90406,UseShower
+630,Activities,survey,90404,UseShower
+631,Activities,survey,90405,UseShower
+632,Activities,tuc,6002,"Food shopping"
+633,Activities,tuc,4284,"Accompanying an adult as help"
+634,Activities,survey,90901,TimeExercise
+635,Activities,survey,90902,TimeExercise
+636,Activities,survey,90903,TimeExercise
+637,Activities,survey,90904,TimeExercise
+638,Activities,survey,90905,TimeExercise
+639,Activities,survey,90906,TimeExercise
+640,Activities,time,11006,"Delete activity"
+641,Activities,tuc,8554,"Mobile device"
+642,Activities,survey,90013,Gender
+643,Activities,time,11001,"Repeat recently"
+644,Activities,tuc,5291,"Visiting a historical site"
+645,Activities,tuc,3330,"Handicraft and producing textiles"
+646,Activities,tuc,8320,"Listening to recordings"
+647,Activities,tuc,1200,"Unspecified second job"
+648,Activities,tuc,9233,"Child to/from friend"
+649,Activities,tuc,3539,"Other specified making, repairing and maintai"
+650,Activities,tuc,7241,"Communication on the internet"
+651,Activities,tuc,7310,"Solo games and play"
+652,Activities,tuc,9990,"Custom definition"
+653,Activities,tuc,3919,"Other specified help to an adult household me"
+654,Activities,tuc,6179,"Other specified water sports"
+655,Activities,tuc,3312,"Laundry sorting"
+656,Activities,tuc,4240,"Construction and repairs as help to other hou"
+657,Activities,tuc,5220,"Unspecified theatre or concerts"
+658,Activities,time,10000,"root: help"
+659,Activities,people,30010,"location other"
+660,Activities,tuc,1210,"Other job"
+661,Activities,tuc,4250,"Shopping and services as help to other househ"
+662,Activities,tuc,4390,"Other specified participatory activities"
+663,Activities,tuc,211,Eating
+664,Activities,tuc,1000,"Unspecified employment"
+665,Activities,tuc,9230,"Take children"
+666,Activities,tuc,7230,"Mobile device"
+667,Activities,survey,40004,"activity time"
+668,Activities,tuc,390,"Personal care"
+669,Activities,tuc,9410,"Travel related to voluntary work and meetings"
+670,Activities,people,30011,"location home"
+671,Activities,survey,90035,Occupation
+672,Activities,tuc,4220,"Household upkeep as help to other households"
+673,Activities,tuc,3913,"With people"
+675,Activities,tuc,8570,Bathroom
+676,Activities,tuc,3530,"Unspecified making, repairing and maintaining"
+677,Activities,tuc,9800,"Travel related to changing locality"
+678,Activities,tuc,1220,"Coffee and other breaks in second job"
+679,Activities,tuc,8213,"Screen time (mobile)"
+680,Activities,tuc,1399,"Other specified activities related to employm"
+681,Activities,tuc,5225,"Dance performances"
+682,Activities,tuc,7321,"Billiards, pool, snooker or petanque"
+683,Activities,tuc,7251,"Skype or other video call"
+684,Activities,tuc,6132,"Skiing or skating"
+685,Activities,tuc,9970,"No main activity, some idea what it might be"
+686,Activities,tuc,2100,Study
+687,Activities,enjoyment,20001,"enjoyment skip"
+688,Activities,tuc,4310,Meetings
+690,Activities,tuc,8219,"Watching TV"
+691,Activities,tuc,6130,"Biking, skiing and skating"
+692,Activities,tuc,3911,"Being with family"
+693,Activities,people,30030,"Location travelling"
+694,Activities,time,10001,"activity time"
+695,Activities,tuc,3831,"Reading with child"
+696,Activities,tuc,7322,"Chess and bridge"
+697,Activities,tuc,8543,Washer-dryer
+698,Activities,time,11003,"Edit title"
+699,Activities,tuc,3924,"Accompanying a dependent adult household memb"
+700,Activities,tuc,9890,"Other specified travel"
+701,Activities,tuc,8120,Reading
+702,Activities,tuc,3710,"Household management not using the internet"
+703,Activities,people,30024,"Public transport"
+704,Activities,tuc,5290,"Other specified entertainment and culture"
+705,Activities,tuc,4276,"Teaching own non-coresident child"
+706,Activities,tuc,5222,"Opera, operetta or light opera"
+707,Activities,tuc,9430,"Travel related to religious activities"
+708,Activities,tuc,4290,"Other specified informal help"
+709,Activities,tuc,7249,"Other specified communication by computing"
+710,Activities,tuc,111,"In bed, not asleep"
+711,Activities,tuc,3610,Shopping
+712,Activities,time,11005,"End activity"
+713,Activities,tuc,1100,"generic work"
+714,Activities,time,10101,"activity time"
+715,Activities,time,10006,"activity time"
+716,Activities,time,10103,"activity time"
+717,Activities,time,10102,"activity time"
+718,Activities,time,10105,"activity time"
+719,Activities,time,10104,"activity time"
+720,Activities,time,10106,"activity time"
+721,Activities,survey,90603,TimeMobile
+722,Activities,tuc,9510,"Travel (social)"
+723,Activities,tuc,8550,"Entertainment appliance use"
+724,Activities,tuc,3132,"Wash dishes"
+725,Activities,tuc,3630,"Personal services"
+726,Activities,tuc,3000,"Household and family care"
+727,Activities,tuc,5295,"Visiting an urban park, playground or designa"
+728,Activities,tuc,9960,"No main activity, no idea what it might be"
+729,Activities,tuc,3112,"Prepare hot meal"
+730,Activities,tuc,7121,"Singing or other musical activities"
+732,Activities,tuc,7239,"Other specified information by computing"
+733,Activities,tuc,5310,Resting
+734,Activities,tuc,8001,"Social media"
+735,Activities,tuc,215,Drink
+736,Activities,tuc,1140,Work
+737,Activities,tuc,3724,"Shopping for&ordring gds&srv related to acc v"
+738,Activities,tuc,9440,"Travel related to participatory activities ot"
+739,Activities,tuc,4279,"Other specified childcare as help"
+740,Activities,tuc,6100,Exercise
+742,Activities,tuc,6004,BBQ
+743,Activities,time,10000,"root: activities"
+744,Activities,tuc,6400,"In nature"
+745,Activities,people,30013,"location work"
+746,Activities,tuc,4283,"Other specified help to an adult member of an"
+747,Activities,tuc,9940,"Punctuating activity"
+748,Activities,tuc,6111,"Taking a walk or hike that lasts at least 2 m"
+749,Activities,people,30014,"location friends"
+750,Activities,people,30019,"In the garden"
+751,Activities,tuc,7160,Collecting
+752,Activities,tuc,8518,"Lights on"
+753,Activities,tuc,8220,"Watching video"
+754,Activities,tuc,4280,"Unspecified help to an adult member of anothe"
+755,Activities,tuc,5311,"Rest or sleep"
+756,Activities,tuc,6144,"Outdoor team games"
+757,Activities,tuc,9370,"Travel related to services"
+758,Activities,tuc,8310,"Unspecified radio listening"
+759,Activities,tuc,3810,"Child care"
+760,Activities,tuc,4260,"Help to other households in employment and fa"
+761,Activities,survey,90604,TimeMobile
+762,Activities,people,30031,Travel
+763,Activities,tuc,5246,"Listening to music in a library"
+764,Activities,survey,90034,Occupation
+765,Activities,tuc,8229,"Watching TV/video"
+766,Activities,tuc,8221,"Screen time"
+767,Activities,tuc,8212,"Watching sport on TV"
+768,Activities,survey,90046,WorkingHours
+769,Activities,survey,90045,WorkingHours
+770,Activities,tuc,6220,"Picking berries, mushroom and herbs"
+771,Activities,tuc,300,"Me time"
+772,Activities,survey,90042,WorkingHours
+773,Activities,survey,90041,WorkingHours
+774,Activities,tuc,310,"Wash and dress"
+775,Activities,tuc,5140,"Telephone conversation"
+776,Activities,tuc,8000,"Unspecified mass media"
+777,Activities,survey,90805,TimeCooking
+778,Activities,survey,90804,TimeCooking
+779,Activities,survey,90806,TimeCooking
+780,Activities,tuc,3310,Laundry
+781,Activities,survey,90803,TimeCooking
+782,Activities,survey,90802,TimeCooking
+783,Activities,tuc,3100,"Food or drink "
+784,Activities,survey,90606,TimeMobile
+785,Activities,tuc,4190,"Other specified organisational work"
+786,Activities,tuc,4275,"Physical care and supervision of own child as"
+787,Activities,survey,90032,Occupation
+788,Activities,tuc,7110,"Unspecified visual arts"
+789,Activities,tuc,2120,Homework
+790,Activities,tuc,9600,"Travel (leisure)"
+791,Activities,tuc,1300,"Work or Housework"
+792,Activities,survey,90074,BillContributer
+793,Activities,tuc,3220,"Cleaning yard"
+794,Activities,people,30010,"location other"
+795,Activities,time,10224,"activity time"
+796,Activities,time,10223,"activity time"
+797,Activities,time,10226,"activity time"
+798,Activities,time,10225,"activity time"
+799,Activities,time,10220,"activity time"
+800,Activities,time,10219,"activity time"
+801,Activities,tuc,7000,"Unspecified hobbies, games and computing"
+802,Activities,time,10221,"activity time"
+803,Activities,survey,90014,Gender
+804,Activities,time,10228,"activity time"
+805,Activities,time,10227,"activity time"
+806,Activities,tuc,3921,"Physical care of a dependent adult household "
+807,Activities,tuc,7100,"Unspecified arts"
+808,Activities,tuc,8215,"Watching TV"
+809,Activities,tuc,8552,"Computer games"
+810,Activities,tuc,7129,"Other specified performing arts"
+811,Activities,tuc,6150,Gymnastics
+812,Activities,tuc,3320,Ironing
+813,Activities,tuc,9120,"Travel to work from home and back only"
+814,Activities,survey,90503,UseVacuumCleaner
+815,Activities,survey,90502,UseVacuumCleaner
+816,Activities,survey,90501,UseVacuumCleaner
+817,Activities,tuc,2000,"Unspecified study"
+818,Activities,survey,90506,UseVacuumCleaner
+819,Activities,survey,90505,UseVacuumCleaner
+820,Activities,survey,90504,UseVacuumCleaner
+821,Activities,tuc,9520,"Travel for entertainment"
+822,Activities,tuc,8217,"Screen time (tablet)"
+823,Activities,tuc,7220,"Computing - programming"
+824,Activities,tuc,3213,"Clean floors"
+825,Activities,time,10307,"activity time"
+826,Activities,time,10308,"activity time"
+827,Activities,people,30018,"Outdoor activity"
+828,Activities,tuc,8561,Mower
+829,Activities,survey,90073,BillContributer
+830,Activities,people,30030,"location travelling"
+831,Activities,time,10302,"activity time"
+832,Activities,time,10300,"activity time"
+833,Activities,time,10305,"activity time"
+834,Activities,time,10306,"activity time"
+835,Activities,time,10303,"activity time"
+836,Activities,time,10304,"activity time"
+837,Activities,time,10009,"activity time"
+838,Activities,time,10008,"activity time"
+839,Activities,time,10005,"activity time"
+840,Activities,time,10004,"activity time"
+841,Activities,time,10007,"activity time"
+842,Activities,tuc,9950,"Filling in the time use diary"
+843,Activities,time,10001,"activity time"
+844,Activities,time,10003,"activity time"
+845,Activities,time,10002,"activity time"
+846,Activities,tuc,8190,"Other specified reading"
+847,Activities,tuc,3830,"Being with child"
+848,Activities,tuc,7112,"Making videos, taking photos or related activ"
+849,Activities,tuc,3130,"Lay or clear table"
+850,Activities,tuc,6160,Fitness
+851,Activities,tuc,8214,"Screen time (projector)"
+852,Activities,tuc,1310,"Lunch break"
+853,Activities,tuc,7330,"Computer games"
+854,Activities,tuc,1391,"Activities related to job seeking"
+855,Activities,tuc,6171,Swimming
+856,Activities,tuc,6311,"Activities related to sports"
+857,Activities,tuc,5240,"Unspecified library"
+858,Activities,tuc,3590,"Other specified construction and repairs"
+859,Activities,tuc,314,"Getting dressed"
+860,Activities,tuc,7259,"Other specified computing"
+861,Activities,tuc,3314,"Using tumble dryer"
+862,Activities,survey,90043,WorkingHours
+863,Activities,tuc,4270,"Unspecified childcare as help to other househ"
+864,Activities,survey,90602,TimeMobile
+865,Activities,enjoyment,20002,"enjoyment 1"
+866,Activities,survey,90601,TimeMobile
+867,Activities,tuc,6142,"Indoor team games"
+868,Activities,tuc,9390,"Travel escorting an adult (other than educati"
+869,Activities,time,10002,"activity time"
+870,Activities,survey,90605,TimeMobile
+871,Activities,people,30011,"location home"
+872,Activities,tuc,3250,"Clear up"
+873,Activities,tuc,8573,"Trim hair"
+874,Activities,tuc,3510,"House construction and renovation"
+875,Activities,tuc,1130,Work
+876,Activities,tuc,7150,"Unspecified hobbies"
+877,Activities,tuc,3800,Childcare
+878,Activities,tuc,8542,"Tumble dryer"
+879,Activities,tuc,5250,"Sports events"
+880,Activities,tuc,2190,Study
+881,Activities,tuc,8216,Computer
+882,Activities,tuc,7119,"Other specified visual arts"
+884,Activities,tuc,3600,Shopping
+885,Activities,tuc,4278,"Accompanying own non-coresident child"
+886,Activities,tuc,3811,"Feeding the child"
+887,Activities,tuc,5210,Cinema
+888,Activities,tuc,3140,Preserving
+889,Activities,tuc,8599,"Hygiene / Beauty"
+890,Activities,tuc,302,"Getting ready"
+891,Activities,survey,90092,EnergyInterest
+892,Activities,survey,90091,EnergyInterest
+893,Activities,survey,90031,Occupation
+894,Activities,tuc,5242,"Reference to bks and other library materials "
+895,Activities,tuc,3891,"Other specified childcare"
+896,Activities,tuc,8517,"Lights off"
+897,Activities,survey,90094,EnergyInterest
+898,Activities,survey,90093,EnergyInterest
+899,Activities,tuc,5100,"Unspecified social life"
+900,Activities,tuc,322,"Bathing children"
+901,Activities,tuc,9234,"Taking children"
+902,Activities,tuc,1390,"Other specified activities related to employm"
+903,Activities,tuc,8560,"Garden tools"
+905,Activities,tuc,7329,"Other specified parlour games and play"
+906,Activities,time,10217,"activity time"
+907,Activities,time,10218,"activity time"
+908,Activities,time,10213,"activity time"
+909,Activities,time,10214,"activity time"
+910,Activities,time,10215,"activity time"
+911,Activities,time,10216,"activity time"
+912,Activities,time,10209,"activity time"
+913,Activities,time,10210,"activity time"
+914,Activities,time,10211,"activity time"
+915,Activities,time,10212,"activity time"
+916,Activities,tuc,4200,"Unspecified informal help to other households"
+917,Activities,tuc,8211,"Watching a film on TV"
+918,Activities,tuc,6005,"Food outdoors"
+919,Activities,survey,90054,WorkRegularity
+920,Activities,tuc,8510,"Household appliance use"
+921,Activities,survey,90052,WorkRegularity
+922,Activities,survey,90053,WorkRegularity
+923,Activities,survey,90051,WorkRegularity
+924,Activities,tuc,2210,"Free Time Study"
+925,Activities,tuc,9110,"Travel (work)"
+926,Activities,tuc,3900,"Being with others"
+927,Activities,tuc,3430,"With pet"
+928,Activities,survey,90044,WorkingHours
+929,Activities,tuc,5243,"Using internet in the library"
+930,Activities,tuc,210,Eat
+931,Activities,tuc,4277,"Reading, playing & talking to own non-coresid"
+932,Activities,enjoyment,20003,"enjoyment 2"
+933,Activities,tuc,5120,"Visiting and receiving visitors"
+934,Activities,tuc,6110,"Walking and hiking"
+935,Activities,survey,90061,WorkHome
+936,Activities,survey,90062,WorkHome
+937,Activities,survey,90063,WorkHome
+938,Activities,survey,90064,WorkHome
+939,Activities,survey,90065,WorkHome
+940,Activities,survey,90066,WorkHome
+941,Activities,tuc,9710,"Travel related to gambling"
+942,Activities,tuc,6170,"Unspecified water sports"
+943,Activities,tuc,6140,"Unspecified ball games"
+944,Activities,tuc,3721,"Online shopping"
+945,Activities,tuc,3410,Gardening
+946,Activities,tuc,6312,"Activities related to productive exercise"
+947,Activities,tuc,3110,"Prepare meal"
+948,Activities,tuc,3440,"Walking the dog"
+949,Activities,survey,90036,Occupation
+950,Activities,tuc,3920,"Play with child"
+951,Activities,tuc,7120,"Unspecified performing arts"
+952,Activities,tuc,6006,"Outdoor food"
+953,Activities,tuc,8210,"Screen time"
+954,Activities,tuc,8557,Toys
+955,Activities,tuc,9400,"Travel related to organisational work"
+956,Activities,tuc,8541,"Washing machine"
+957,Activities,tuc,316,Wash
+958,Activities,tuc,7140,"Other specified arts"
+959,Activities,tuc,8545,Iron
+960,Activities,tuc,8553,TV
+961,Activities,tuc,4320,"Religious activities"
+962,Activities,tuc,3111,"Prepare cold meal"
+963,Activities,tuc,311,Shower
+964,Activities,tuc,5190,Socialising
+965,Activities,tuc,8551,Computer
+966,Activities,tuc,8544,"Sewing machine"
+967,Activities,tuc,5223,"Concerts or other performances of classical m"
+969,Activities,survey,90801,TimeCooking
+970,Activities,time,11002,"Edit time"
+972,Activities,people,30021,Walking
+973,Activities,survey,90095,EnergyInterest
+974,Activities,people,30022,Cycling
+976,Activities,time,10207,"activity time"
+977,Activities,time,10208,"activity time"
+978,Activities,people,30011,"location home"
+979,Activities,time,10201,"activity time"
+980,Activities,time,10202,"activity time"
+981,Activities,time,10200,"activity time"
+982,Activities,time,10205,"activity time"
+983,Activities,time,10206,"activity time"
+984,Activities,time,10203,"activity time"
+985,Activities,time,10204,"activity time"
+986,Activities,tuc,6310,"Unspecified sports related activities"
+987,Activities,tuc,5110,"Socialising with family"
+988,Activities,tuc,7340,Gambling
+989,Activities,people,30018,"location outdoors"
+991,Activities,tuc,8110,"Reading periodicals"
+992,Activities,tuc,9010,"Travel related to personal business"
+993,Activities,tuc,8311,"Listening to music on the radio"
+994,Activities,tuc,5000,"Personal care"
+995,Activities,survey,90106,UseDishwasher
+996,Activities,survey,90105,UseDishwasher
+997,Activities,survey,90104,UseDishwasher
+998,Activities,survey,90103,UseDishwasher
+999,Activities,survey,90102,UseDishwasher
+1000,Activities,survey,90101,UseDishwasher
+1001,Activities,tuc,8556,Music
+1002,Activities,tuc,8571,"Hair dryer"
+1003,Activities,tuc,3690,"Other specified shopping and services"
+1004,Activities,tuc,8562,"Hedge trimmer"
+1005,Activities,tuc,6120,"Jogging and running"
+1006,Activities,survey,90702,TimeScreens
+1007,Activities,tuc,7320,"Unspecified games and play with others"
+1008,Activities,people,30016,"location outdoors public place"
+1009,Activities,tuc,6131,Biking
+1010,Activities,tuc,212,"Eating hot meal"
+1011,Activities,time,10005,"activity time"
+1012,Activities,tuc,6143,"Outdoor pairs or doubles games"
+1013,Activities,tuc,4282,"Accompanying an adult as help to another hous"
+1014,Activities,tuc,9360,"Going shopping"
+1015,Activities,tuc,1110,"Main job"
+1016,Activities,time,11004,"Something else"
+1017,Activities,tuc,315,"Hygiene / Beauty"
+1018,Activities,tuc,3720,Internet
+1019,Activities,tuc,3490,"Other specified gardening and pet care"
+1020,Activities,tuc,8502,"Use an appliance"
+1021,Activities,tuc,9420,"Travel related to informal help to other hous"
+1022,Activities,survey,90204,UseWashingMachine
+1023,Activities,survey,90205,UseWashingMachine
+1024,Activities,survey,90206,UseWashingMachine
+1025,Activities,tuc,6210,"Hunting and fishing"
+1026,Activities,survey,90201,UseWashingMachine
+1027,Activities,survey,90202,UseWashingMachine
+1028,Activities,survey,90203,UseWashingMachine
+1029,Activities,tuc,3619,"Other specified shopping"
+1030,Activities,tuc,3200,Housework
+1031,Activities,tuc,5229,"Other specified theatre or concerts"
+1032,Activities,tuc,3212,"Vacuum cleaning"
+1033,Activities,tuc,5241,"Borrowing books, records, audiotapes, videota"
+1034,Activities,tuc,3620,"Commercial and administrative services"
+1035,Activities,tuc,6010,"Outdoors / appliances"
+1036,Activities,tuc,4230,"Gardening and pet care as help to other house"
+1038,Activities,tuc,3820,"Study with child"
+1039,Activities,tuc,3136,"Lay or clear table"
+1040,Activities,tuc,8312,"Listening to sport on the radio"
+1041,Activities,tuc,3230,"Heating and water"
+1042,Activities,tuc,3614,"Shopping or browsing at car boot sales or ant"
+1043,Activities,tuc,10,"Sleep or rest"
+1044,Activities,tuc,8300,"Unspecified listening to radio and music"
+1045,Activities,tuc,6200,"Unspecified productive exercise"
+1046,Activities,tuc,3840,"not used - Accompanying child"
+1047,Activities,people,30013,"location work"
+1048,Activities,survey,40001,"activity time"
+1049,Activities,survey,40003,"activity time"
+1050,Activities,survey,40002,"activity time"
+1051,Activities,survey,40005,"activity time"
+1052,Activities,time,10222,"activity time"
+1053,Activities,survey,40006,"activity time"
+1055,Activities,tuc,3722,"Shopping for&ordring food via the internet"
+1056,Activities,survey,90011,Gender
+1057,Activities,tuc,1111,Work
+1058,Activities,time,10011,"activity time"
+1059,Activities,time,10010,"activity time"
+1060,Activities,time,10012,"activity time"
+1061,Activities,tuc,6149,"Other specified ball games"
+1062,Activities,tuc,4271,"Physical care and supervision of child as hel"
+1063,Activities,tuc,6119,"Other walk or hike"
+1064,Activities,tuc,9630,"Travel related to productive excs expt huntin"
+1065,Activities,tuc,3214,Cleaning
+1066,Activities,tuc,8540,"Handling clothes"
+1067,Activities,tuc,3818,"Putting child to bed"
+1068,Activities,tuc,4273,"Reading, playing & talking to the child as he"
+1069,Activities,tuc,4120,"Volunteer work through an organisation"
+1070,Activities,tuc,5244,"Using computers in the library other than int"
+1071,Activities,tuc,4289,"Other specified help to an adult member of an"
+1072,Activities,tuc,9380,"Travel escorting a child (other than educatio"
+1073,Activities,tuc,3211,"Cleaning house"
+1074,Activities,tuc,213,Snack
+1075,Activities,tuc,8536,Dishwasher
+1076,Activities,tuc,3920,"Help someone"
+1077,Activities,tuc,5293,"Visiting a botanical site"
+1078,Activities,tuc,3240,"Arrange things"
+1079,Activities,tuc,8532,"Cook on hob"
+1080,Activities,tuc,3613,"Shopping mainly related to accommodation"
+1081,Activities,tuc,8534,Toaster
+1082,Activities,tuc,9310,"Travel (shop/service)"
+1084,Activities,survey,90080,Income
+1085,Activities,survey,90082,Income
+1086,Activities,survey,90081,Income
+1087,Activities,survey,90084,Income
+1088,Activities,survey,90083,Income
+1089,Activities,survey,90085,Income
+1090,Activities,tuc,0,"Personal care"
+1091,Activities,tuc,3124,Toaster
+1092,Activities,tuc,6003,"Getting a takeaway"
+1093,Activities,tuc,8511,"Vacuum cleaner"
+1094,Activities,tuc,5292,"Visiting a wildlife site"
+1095,Activities,tuc,6290,"Other specified productive exercise"
+1096,Activities,tuc,8531,Oven
+1097,Activities,tuc,321,Bathing
+1098,Activities,tuc,5299,"Other specified entertainment or culture"
+1099,Activities,tuc,5224,"Live music other than classical concerts, ope"
+1100,Activities,tuc,9991,"Unspecified time use"
+1101,Activities,enjoyment,20005,"enjoyment 4"
+1102,Activities,tuc,3910,"Being with friends"
+1103,Activities,survey,90703,TimeScreens
+1104,Activities,survey,90701,TimeScreens
+1105,Activities,survey,90706,TimeScreens
+1106,Activities,survey,90704,TimeScreens
+1107,Activities,survey,90705,TimeScreens
+1108,Activities,tuc,3120,Baking
+1109,Activities,tuc,8501,"Use an appliance"
+1110,Activities,tuc,8514,Heater
+1111,Activities,tuc,9500,"Travel (social)"
+1112,Activities,tuc,9980,"Illegible activity"
+1113,Activities,tuc,8572,"Brush teeth"
+1114,Activities,tuc,7111,"Painting, drawing or other graphic arts"
+1115,Activities,tuc,9130,"Travel to work from a place other than home"
+1116,Activities,tuc,3929,"Other specified help to a dependent adult hou"
+1117,Activities,tuc,110,Sleep
+1118,Activities,survey,90090,EnergyInterest
+1119,Activities,tuc,9100,"Travel to/from work"
+1121,Activities,location,1,Home
+1122,Activities,location,2,Travelling
+1123,Activities,location,3,"At work"
+1124,Activities,location,4,Public
+1125,Activities,location,5,Outdoors
+1126,Activities,location,6,Garden
+1127,Activities,location,7,Other
+1128,Activities,location,21,Walking
+1129,Activities,location,24,"Public transport"
+1130,Activities,location,23,Driving
+1131,Activities,location,22,Cycling
+1132,NULL,NULL,NULL,NULL
+1133,Activities,location5,1,Home
+1134,Activities,location5,2,Travelling
+1135,Activities,location5,3,Work
+1136,Activities,location5,4,Public
+1137,Activities,location5,5,Public
+1138,Activities,location5,6,Garden
+1139,Activities,location5,7,Travelling
+1140,Activities,location5,21,Travelling
+1141,Activities,location5,24,Travelling
+1142,Activities,location5,23,Travelling
+1143,Activities,location5,22,Travelling
+1144,Activities,tuc,8525,"Brush teeth"
+1145,Activities,tuc,8523,Music
+1146,Activities,tuc,9000,Travel
+1147,Activities,tuc,8503,"Dish washer"
