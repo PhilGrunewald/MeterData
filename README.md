@@ -29,25 +29,25 @@ The data deposited in March 2019 is summarised in Table 1.
 
 Table: Statistics of the METER data deposition March 2019
 
-Property                             Records 
----------                          ---------
-Earliest record                    17 Feb 2016
-Latest record                      18 Jan 2019
-Households registered              414
-Households participated            361
-Distinct households                293
-&nbsp;                             &nbsp;
-*Electricity*                      &nbsp;
-Complete electricity records       264
-Electricity readings (1 minute)    596396
-Electricity readings (10 minutes)  60085
-&nbsp;                             &nbsp;
-*Activities*                       &nbsp; 
-Activity recorders issued          743
-Activity records                   529
-Activities reported                16378
-Paper diaries                      134
-App based diaries                  395
+Property                          |  Records 
+---------                         |---------
+Earliest record                   | 17 Feb 2016
+Latest record                     | 18 Jan 2019
+Households registered             | 414
+Households participated           | 361
+Distinct households               | 293
+&nbsp;                            | &nbsp;
+*Electricity*                     | &nbsp;
+Complete electricity records      | 264
+Electricity readings (1 minute)   | 596396
+Electricity readings (10 minutes) | 60085
+&nbsp;                            | &nbsp;
+*Activities*                      | &nbsp; 
+Activity recorders issued         | 743
+Activity records                  | 529
+Activities reported               | 16378
+Paper diaries                     | 134
+App based diaries                 | 395
 
 
 A complete electricity record in Table 1 refers to records with good electricity readings. Some household attached the recorder shortly after the study period begins and still returned some valid data. Some of the registered households have not yet taken part, while others have done the study more than once.
@@ -364,26 +364,26 @@ The device type is identified by `DataType` as shown in Table 2.
 
 Table: Device types
 
-`DataType`   Meaning
------------- -------------
-A            Activities
-E            Electricity
-P/PV         PV circuit
+`DataType`   | Meaning
+------------ | -------------
+A            | Activities
+E            | Electricity
+P/PV         | PV circuit
 
 The `SerialNumber` conventions further distinguish the type of device as shown in Table 3
 
 Table: Serial number conventions
 
-`SerialNumber`       Meaning
-------------------   -------------------------------------
- 0                    Paper diary
- 1..999               aMeter pre-installed
- xxyyd                eMeter
- &nbsp;               xx = month of study day,
- &nbsp;               yy = serial number,
- &nbsp;               d = default day to record (0=Sunday)
- 16 digit             Downloaded app 
- &nbsp;               (serial number of mobile device)
+`SerialNumber`      |  Meaning
+------------------  |  -------------------------------------
+ 0                  |   Paper diary
+ 1..999             |   aMeter pre-installed
+ xxyyd              |   eMeter
+ &nbsp;             |   xx = month of study day,
+ &nbsp;             |   yy = serial number,
+ &nbsp;             |   d = default day to record (0=Sunday)
+ 16 digit           |   Downloaded app 
+ &nbsp;             |   (serial number of mobile device)
 
 
 `Quality`
@@ -407,19 +407,19 @@ The `status` field shows how far a household has progressed through the study pr
 
 Table: Status progression through the study
 
-``status``       Meaning
------------      ------------------------------------------
-0                incomplete survey
-1                survey complete
-2                no date selected
-3                date selected
-4                awaiting confirmation of participation
-5                devices issued
-6                devices returned and processed
-7                data shared with contact
-8                Follow-up Surveys provided
-10..11           faulty data
-31               offered new dates
+``status``    |  Meaning
+-----------   |  ------------------------------------------
+0             |  incomplete survey
+1             |  survey complete
+2             |  no date selected
+3             |  date selected
+4             |  awaiting confirmation of participation
+5             |  devices issued
+6             |  devices returned and processed
+7             |  data shared with contact
+8             |  Follow-up Surveys provided
+10..11        |  faulty data
+31            |  offered new dates
 
 `page_number` is the last page a contact filled in as part of the Household Survey. When returning to the survey, participants can continue on this page. 
 
@@ -429,13 +429,13 @@ The `study` field distinguishes different phases of the study as shown in Table 
 
 Table: Study phases identified in **Household**
 
-`study`   Meaning
---------- ----------------------------------------
-0         default/not given
-1         early trials, 24 hours
-2         activities entered using paper diaries
-3         activities entered using the METER app
-4         community study (West Oxford)
+`study`   | Meaning
+--------- | ----------------------------------------
+0         | default/not given
+1         | early trials, 24 hours
+2         | activities entered using paper diaries
+3         | activities entered using the METER app
+4         | community study (West Oxford)
 
 The `reference` field was introduced in January 2018. Prior entries are *NULL*. The ``referees`` field has been omitted from this deposition for confidentiality reasons. This field can contain the names of people who referred a participant to the study.
 
@@ -704,47 +704,50 @@ All activities are precoded on the aMeter. Paper diaries were processed using th
 
 Table: Activity table fields and value ranges
 
-| Field                 | Description                                     | Values                    
-| ------                | --------------                                  | ------------------                 
-| ``idActivities`` (PK) | Activity ID                                     | int                                   
-| ``Meta_idMeta`` (FK)  | Recording device ID                             | int
-| ``dt_activity``       | Time of activity                                | DATETIME                           
-| ``dt_recorded``       | Time of reporting                               | DATETIME                           
-| ``tuc``               | Time Use Code                                   | 0..9999                            
-| ``activity``          | Activity label                                  | text                               
-| ``location``          | Location                                        | Home (1)                           
-|                       |                                                 | Travelling (2)
-|                       |                                                 | - foot (21)
-|                       |                                                 | - bike (22)
-|                       |                                                 | - car (23)
-|                       |                                                 | - public transport (24)
-|                       |                                                 | Work (3)
-|                       |                                                 | Public place (4)
-|                       |                                                 | Outdoors (5)
-|                       |                                                 | Garden (6)
-|                       |                                                 | Other (7)
-| ``enjoyment``         | Enjoyment                                       | Not at all (1)                     
-|                       |                                                 | Not much (2)
-|                       |                                                 | So so (3)
-|                       |                                                 | Somewhat (4)
-|                       |                                                 | Very much (5)
-|                       |                                                 | 'undefined'
-| ``category``          | Broad activity category                         |  
-|                       |                                                 | care_self
-|                       |                                                 | care_others
-|                       |                                                 | food
-|                       |                                                 | recreation
-|                       |                                                 | work
-|                       |                                                 | care_house
-|                       |                                                 | care_other
-|                       |                                                 | other_category
-| ``people``            | Number of other people engaged | No one (0)                         
-|                       |                                in this activity                  | 1 other (1)
-|                       |                                                 | 2 people (2)
-|                       |                                                 | 3 people (3)
-|                       |                                                 | 4 people (4)
-|                       |                                                 | More than 4 (5)
-| ``path``              | Entry sequence (comma separated list)           | tuc  ID list                     
+Field                 | Description /Options                            | Values
+------                | --------------                                  | ------------------
+``idActivities`` (PK) | Activity ID                                     | int
+``Meta_idMeta`` (FK)  | Recording device ID                             | int
+``dt_activity``       | Time of activity                                | DATETIME
+``dt_recorded``       | Time of reporting                               | DATETIME
+``location``          | Where are you?                                  | &nbsp;
+&nbsp;                | Home                                            | 1
+&nbsp;                | Travelling                                      | 2
+&nbsp;                | - foot                                          | 21
+&nbsp;                | - bike                                          | 22
+&nbsp;                | - car                                           | 23
+&nbsp;                | - public transport                              | 24
+&nbsp;                | Work                                            | 3
+&nbsp;                | Public place                                    | 4
+&nbsp;                | Outdoors                                        | 5
+&nbsp;                | Garden                                          | 6
+&nbsp;                | Other                                           | 7
+``activity``          | What are you doing?                             | text
+``tuc``               | Time Use Code                                   | 0..9999
+``category``          | Activity category                               | &nbsp;
+&nbsp;                | &nbsp;                                          | care_self
+&nbsp;                | &nbsp;                                          | care_others
+&nbsp;                | &nbsp;                                          | food
+&nbsp;                | &nbsp;                                          | recreation
+&nbsp;                | &nbsp;                                          | work
+&nbsp;                | &nbsp;                                          | care_house
+&nbsp;                | &nbsp;                                          | care_other
+&nbsp;                | &nbsp;                                          | other_category
+``people``            | How many people are you doing this with?        | &nbsp;
+&nbsp;                | No one                                          | 0
+&nbsp;                | 1 other                                         | 1
+&nbsp;                | 2 people                                        | 2
+&nbsp;                | 3 people                                        | 3
+&nbsp;                | 4 people                                        | 4
+&nbsp;                | More than 4                                     | 5
+``enjoyment``         | How much are you enjoying this?                 | &nbsp;
+&nbsp;                | Not at all                                      | 1
+&nbsp;                | Not much                                        | 2
+&nbsp;                | So so                                           | 3
+&nbsp;                | Somewhat                                        | 4
+&nbsp;                | Very much                                       | 5
+&nbsp;                | 'undefined'                                     | 0
+``path``              | Entry sequence                                  | tuc  ID list
 
 Default value is 0, unless this is an option, as for ``people``, where the default is '-1' instead.
 
@@ -755,12 +758,12 @@ Electricity consumption is recorded every second and downsampled to mean values 
 
 Table: Electricity table fields
 
-Field             Description/Comment
--------------     -------------------
-``idElectricity`` Primary key
-``Meta_idMeta``   Recording device ID
-``dt``            Time of reading (datetime)
-``Watt``          Power in Watt (float)
+Field             |  Description/Comment
+-------------     |  -------------------
+``idElectricity`` |  Primary key
+``Meta_idMeta``   |  Recording device ID
+``dt``            |  Time of reading (datetime)
+``Watt``          |  Power in Watt (float)
 
 A full record covers 28 hours, starting at 5 pm. Prior to 18 April 2016 records were only 24 hours, starting at 4 am.
 
@@ -805,13 +808,13 @@ Note that questions are truncated to 45 characters. For full wording of question
 
 Table: Legend table with meaning of values in other tables
 
-Field         Description
-------------- -------------------
- ``idLegend`` Primary key
- ``tab``      Name of reference table:  **Household**    ,  **Individual**  or  **Activities**
- ``col``      Field in reference table
- ``value``    Range of values ('q' = survey question)
- ``meaning``  Explanation of corresponding entry
+Field         |  Description
+------------- |  -------------------
+ ``idLegend`` |  Primary key
+ ``tab``      |  Name of reference table:  **Household**    ,  **Individual**  or  **Activities**
+ ``col``      |  Field in reference table
+ ``value``    |  Range of values ('q' = survey question)
+ ``meaning``  |  Explanation of corresponding entry
 
 
 Resources
