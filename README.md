@@ -50,7 +50,7 @@ Paper diaries                     | 134
 App based diaries                 | 395
 
 
-A complete electricity record in Table 1 refers to records with good electricity readings. Some household attached the recorder shortly after the study period begins and still returned some valid data. Some of the registered households have not yet taken part, while others have done the study more than once.
+A complete electricity record in Table 1 refers to records with good electricity readings. Some households attached the recorder shortly after the study period begins and still returned some valid data. Some of the registered households have not yet taken part, while others have done the study more than once.
 
 This document has two main parts. Under [Data collection](#data-collection) the recruitment process and data collection instruments are explained. The [Data deposition](#data-deposition) section introduces the data tables, their relationships and the meaning of fields, columns and values.
 
@@ -86,7 +86,7 @@ Thus far METER's participation has been on a voluntary opt-in basis. The followi
 
 From January 2018 onwards the Household survey captures the source of referrals.
 
-No explicit rewards are offered, but each year one participant can win the cash equivalent of one year of their electricity bill. See [terms and conditions](http://www.energy-use.org/how_it_works.php "How it works").
+No explicit rewards are offered, but each year one participant can win the cash equivalent of one year off their electricity bill. See [terms and conditions](http://www.energy-use.org/how_it_works.php "How it works").
 
 Participant consent
 -------------------
@@ -110,10 +110,7 @@ The data policy is available [online](http://www.energy-use.org/data_policy.php)
 > Electricity load data may seem innocuous, but it can contain a lot of personal information, such as when and for how long you were at home. In combination with the activity information even more personal insights are possible. We therefore treat these data as personal and sensitive.
 > 
 > It is important to us that you remain in charge of the data. If for any reason you become uncomfortable about us holding information from you, you are entitled to ask us to remove the data - no questions asked.
-> 
-> Electricity load data may seem innocuous, but it can contain a lot of personal information, such as when and for how long you were at home. In combination with the activity information even more personal insights are possible. We therefore treat these data as personal and sensitive.
-    
->It is important to us that you remain in charge of the data. If for any reason you become uncomfortable about us holding information from you, you are entitled to ask us to remove the data - no questions asked.
+>
     
 > **Your consent**
 > 
@@ -125,11 +122,11 @@ The data policy is available [online](http://www.energy-use.org/data_policy.php)
 > 
 > There are different levels of access we would grant:
 > 
-> Your name and address: These will not be shared under any circumstances. We may identify your region based on your post code, but not beyond street level. Your survey information: These will only be used for research and may be made accessible to other researchers. Wider access is only available in aggregated or fragmented form. That means your information is combined with others, such that your individual data cannot be recognised. Your activity information: Researchers will have access to these data. We may also like to share examples of activity data with the public, provided you have given consent explicitly. Otherwise we will only share aggregated data (i.e. combined with enough others that make it impossible to identify individuals). Your load profile: We treat your electricity data with the same level of sensitivity as your activity data. How we store your data All of the data we collect, is stored on a secure server within a relational SQL database. Your name and address are stored separately from your survey information and your electricity readings. The only thing that links these data is an ID number we generate for you.
+> Your name and address: These will not be shared under any circumstances. We may identify your region based on your post code, but not beyond street level. Your survey information: These will only be used for research and may be made accessible to other researchers. Wider access is only available in aggregated or fragmented form. That means your information is combined with others, such that your individual data cannot be recognised. Your activity information: Researchers will have access to these data. We may also like to share examples of activity data with the public, provided you have given consent explicitly. Otherwise we will only share aggregated data (i.e. combined with enough others that make it impossible to identify individuals). Your load profile: We treat your electricity data with the same level of sensitivity as your activity data. How we store your data: All of the data we collect, is stored on a secure server within a relational SQL database. Your name and address are stored separately from your survey information and your electricity readings. The only thing that links these data is an ID number we generate for you.
 
 ![Compulsory consent prior to survey completion](images/consent_screen.png)
 
-Finally, before participant complete the individual survey on the
+Finally, before participants complete the individual survey on the
 activity recorder, they *have to* agree to their data to be used for
 research, as shown in Figure 2.
 
@@ -171,19 +168,19 @@ Data collected includes (see [Household table](#household) for questions and ran
 Participation
 -------------
 
-The electricity recorder is scheduled to automatically switch on and start recording at 5pm on a given day of the week (Monday to Sunday). The devices are therefore charged, configured and sent six days in prior to the study day, such that their next start-up is the recording day. Participating households receive the envelope 2-4 days prior to their chosen date. 
+The electricity recorder is scheduled to automatically switch on and start recording at 5pm on a given day of the week (Monday to Sunday). The devices are therefore charged, configured and sent six days prior to the study day, such that their next start-up is the recording day. Participating households receive the envelope 2-4 days prior to their chosen date. 
 
 The envelope contains:
 
 - A note with instructions explaining the content of the parcel and next steps (Figure 5)
 - An activity recorder (Figure 6) for each household member aged 8 or above 
 - A booklet with instruction for the activity recorder (see [booklet.pdf](./booklet.pdf))
-- An electricity recorder - (Figure 11)
+- An electricity recorder (Figure 11)
 - A prepaid return envelope
 
 ![The letter with instructions sent out as part of the parcel](images/letter.pdf)
 
-Before January 2017 participants received a paper diary (see [diary.pdf](./diary.pdf)).
+Before January 2017 participants received a paper diary instead of an activity recorder (see [diary.pdf](./diary.pdf)).
 
 Activity and electricity recordings are taken over a 28 hour period starting at 5pm, thus capturing two of the typically most energy intensive periods between 5pm and 7pm. We refer to this 28 hour period as a 'study day' (even though it has 4 more hours than a day).
 
@@ -193,12 +190,12 @@ Activity recording
 
 ![The activity recorder (aMeter)](images/aMeter.png)
 
-Activity recorders (aMeters) are issues as a pre-installed app on an Acatel Pixi 4 smart phone device. All other phone features are disabled, except the power button, which can toggle the device on/off. The devices are thus configured to only provide two functions:
+Activity recorders (aMeters) are issues as a pre-installed app on an Alcatel Pixi 4 smart phone device. All other phone features are disabled, except the power button, which can toggle the device on/off. The devices are thus configured to only provide two functions:
 
 1.  [Individual survey](#individual-survey) completion and
 2.  [Activity recording](#activity-recording)
 
-The interface is specifically designed to be fail save and intuitive. No sliders, gestures or nested menus exist. All operations are a choice of 6 large buttons on a 2 by 3 grid (Figure 7). The only exception is the home screen where reported activities are chronologically listed in scrollable form.
+The interface is specifically designed to be failsafe and intuitive. No sliders, gestures or nested menus exist. All operations are a choice of 6 large buttons on a 2 by 3 grid (Figure 7). The only exception is the home screen where reported activities are chronologically listed in scrollable form.
 
 ![Example of a screen for the Individual Survey](images/survey.png)
 
@@ -249,14 +246,14 @@ detailed description of activities.
 
 *Editing an existing activity*
 
-Tapping an activity on the home screen opens up the 6 editing options shown in Figure 10.
+Tapping an activity on the home screen opens up the 6 editing options shown in Figure 10. These can be:
 
 -   add another activity that took place in parallel
 -   repeat that (past) activity now
 -   change the caption of the activity (time use code remains unchanged)
 -   change the time of the activity
 -   report the activity as ended
--   deleting the activity
+-   delete the activity
 
 Section Activities explains how activity records are processed and stored.
 
@@ -282,7 +279,8 @@ While temporal accuracy is high, the recordings are prone to variations between 
 
 In their current form, the duration of electricity recording is limited to \~42 hours by the battery life of the devices. With booster batteries this duration could be extended.
 
-The main failure mechanism for electricity recorders are
+The main failure mechanism for electricity recorders are:
+
 - tearing of the flexure on the current clamp, often due to difficult access under the meter
 - damage to the iron core surrounding the wire, when closing the clamp onto (rather than around) the wire
 
@@ -328,7 +326,7 @@ The data relationships between tables in the Meter database are shown in Figure 
 
 The Household Survey information is linked to the contact via the foreign key `Contact_idContact` in **Household**.
 
-Each time an `idContact` takes part in the study, a unique `idHousehold` is generated, which has `idContact` as it's foreign key. 
+Each time an `idContact` takes part in the study, a unique `idHousehold` is generated, which has `idContact` as its foreign key. 
 All survey information is copied to the new `idHousehold` and participants can update content if their circumstances have changed.
 
 Any personal information in **Contact** is excluded from this deposition. It is still possible to identify repeat participants via their common `idContact` in the **Household** table.
@@ -401,7 +399,7 @@ Household
 
 The **Household** table is populated as part of the online Household Survey. The identity of a household is given by the foreign key `Contact_idContact` (the **Contact** table itself is not available for privacy reasons).
 
-Households participating more than once have a unique `idHousehold` for each run. The survey information is duplicated and can be modified by the participant if circumstances have changed. It is possible to identify repeat household via their common `Contact_idContact` (unless they re-registered afresh).
+Households participating more than once have a unique `idHousehold` for each study day. The survey information is duplicated and can be modified by the participant if circumstances have changed. It is possible to identify repeat household via their common `Contact_idContact` (unless they re-registered afresh).
 
 The `status` field shows how far a household has progressed through the study process. The states are listed in Table 4.
 
@@ -439,7 +437,7 @@ Table: Study phases identified in **Household**
 
 The `reference` field was introduced in January 2018. Prior entries are *NULL*. The ``referees`` field has been omitted from this deposition for confidentiality reasons. This field can contain the names of people who referred a participant to the study.
 
-The `timestamp` is the date and time when the record was created, i.e. when a participant first singed up.
+The `timestamp` is the date and time when the record was created, i.e. when a participant first signed up.
 
 The full **Household** table with all survey questions and answer ranges is shown in Table 6.
 
@@ -564,7 +562,7 @@ appliance            | Your appliances. Do you have any of these items?         
 &nbsp;               | Email                                                                              | 4
 &nbsp;               | Friend or other                                                                    | 5
 
-The default value is '0'. The default `date_choice` is '2000-01-01' if no date has yet been selected. The ``provider`` defaults to 'not given'. ``p6pm``, which could meaningfully be '0' has a default of '-1' to indicate a missing value. For some fields a missing value can be ambiguous. Appliances may be '0' because they are not present or because they were omitted in the survey.
+The default value is '0'. The default `date_choice` is '2000-01-01' if no date has yet been selected. The ``provider`` defaults to 'not given'. ``p6pm``, which could meaningfully be '0' has a default of '-1' to indicate a missing value. For some fields a missing value can be ambiguous. Appliances may be '0' because they are not present or because they were omitted when filling the survey.
 
 
 Individual
@@ -778,7 +776,7 @@ The **Legend** table gives access to many of the survey questions and field mean
 
 The remaining ``value``-``meaning`` pairs give the meaning for a range of possible values for this field. Where the range of values is open (counts and free text), no legend is provided.
 
-The survey questions that was asked of participants is denoted with ``value``='q'.
+The survey questions that were asked of participants is denoted with ``value``='q'.
 
 Example: the meaning of a value '1' in **Household** field ``own`` is 
 
