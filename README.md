@@ -347,6 +347,7 @@ Example: to get all activities for a given ``idHousehold`` = X, one can query:
          ON idMeta = Meta_idMeta
        WHERE Household_idHousehold = X
 ```
+<!-- ``` -->
 
 The following sections describe fields, the meaning of values, as well as other conventions for each table.
 
@@ -788,7 +789,7 @@ Example: the meaning of a value '1' in **Household** field ``own`` is
         WHERE `tab` == 'Household' 
         AND `col`   == 'own' 
         AND `value` == '1';
-```
+``` <!-- ``` -->
 
 returns: "Own, With or without a mortgage"
 
@@ -800,7 +801,7 @@ Or, to establish the original question for `people`, one can query:
         WHERE `tab` == 'Household' 
         AND `col`   == 'people' 
         AND `value` == 'q';
-```
+``` <!-- ``` -->
 
 returns: "How many people live at this address?"
 
