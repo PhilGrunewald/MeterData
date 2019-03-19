@@ -86,7 +86,7 @@ Thus far METER's participation has been on a voluntary opt-in basis. The followi
 
 From January 2018 onwards the Household survey captures the source of referrals.
 
-No explicit rewards are offered, but each year one participant can win the cash equivalent of one year off their electricity bill. See [terms and conditions](http://www.energy-use.org/how_it_works.php "How it works").
+No explicit rewards are offered, but each year one participant can win the cash equivalent of their electricity bill for the past year. See [terms and conditions](http://www.energy-use.org/how_it_works.php "How it works").
 
 Participant consent
 -------------------
@@ -122,7 +122,17 @@ The data policy is available [online](http://www.energy-use.org/data_policy.php)
 > 
 > There are different levels of access we would grant:
 > 
-> Your name and address: These will not be shared under any circumstances. We may identify your region based on your post code, but not beyond street level. Your survey information: These will only be used for research and may be made accessible to other researchers. Wider access is only available in aggregated or fragmented form. That means your information is combined with others, such that your individual data cannot be recognised. Your activity information: Researchers will have access to these data. We may also like to share examples of activity data with the public, provided you have given consent explicitly. Otherwise we will only share aggregated data (i.e. combined with enough others that make it impossible to identify individuals). Your load profile: We treat your electricity data with the same level of sensitivity as your activity data. How we store your data: All of the data we collect, is stored on a secure server within a relational SQL database. Your name and address are stored separately from your survey information and your electricity readings. The only thing that links these data is an ID number we generate for you.
+> *Your name and address*: These will not be shared under any circumstances. We may identify your region based on your post code, but not beyond street level. 
+>
+> *Your survey information*: These will only be used for research and may be made accessible to other researchers. Wider access is only available in aggregated or fragmented form. That means your information is combined with others, such that your individual data cannot be recognised. 
+>
+> *Your activity information*: Researchers will have access to these data. We may also like to share examples of activity data with the public, provided you have given consent explicitly. Otherwise we will only share aggregated data (i.e. combined with enough others that make it impossible to identify individuals). 
+>
+> *Your load profile*: We treat your electricity data with the same level of sensitivity as your activity data. 
+> 
+> **How we store your data**
+>
+> All of the data we collect, is stored on a secure server within a relational SQL database. Your name and address are stored separately from your survey information and your electricity readings. The only thing that links these data is an ID number we generate for you.
 
 ![Compulsory consent prior to survey completion](images/consent_screen.png)
 
@@ -295,6 +305,8 @@ Within days after returning the equipment, households receive a link to an inter
 
 The hour of highest electricity consumption is annotated with "Your peak demand". Participants have the opportunity to provide additional information about appliances that may have been in use during this hour from a drop down menu. Simple statistics about minimum, average and peak usage are shown and compared with the study averages.
 
+\newpage
+
 Data deposition
 ===============
 
@@ -345,6 +357,7 @@ Example: to get all activities for a given ``idHousehold`` = X, one can query:
          ON idMeta = Meta_idMeta
        WHERE Household_idHousehold = X
 ```
+
 <!-- ``` -->
 
 The following sections describe fields, the meaning of values, as well as other conventions for each table.
@@ -563,7 +576,7 @@ appliance            | Your appliances. Do you have any of these items?         
 &nbsp;               | Email                                                                              | 4
 &nbsp;               | Friend or other                                                                    | 5
 
-The default value is '0'. The default `date_choice` is '2000-01-01' if no date has yet been selected. The ``provider`` defaults to 'not given'. ``p6pm``, which could meaningfully be '0' has a default of '-1' to indicate a missing value. For some fields a missing value can be ambiguous. Appliances may be '0' because they are not present or because they were omitted when filling the survey.
+The default value is '0'. The default `date_choice` is '2000-01-01' if no date has yet been selected. The ``provider`` defaults to 'not given'. ``p6pm``, which could meaningfully be '0' has a default of '-1' to indicate a missing value. For some fields a missing value can be ambiguous. Appliances may be '0' because they are not present or because they were omitted when filling in the survey.
 
 
 Individual
@@ -787,7 +800,9 @@ Example: the meaning of a value '1' in **Household** field ``own`` is
         WHERE `tab` == 'Household' 
         AND `col`   == 'own' 
         AND `value` == '1';
-``` <!-- ``` -->
+``` 
+
+<!-- ``` -->
 
 returns: "Own, With or without a mortgage"
 
@@ -799,7 +814,9 @@ Or, to establish the original question for `people`, one can query:
         WHERE `tab` == 'Household' 
         AND `col`   == 'people' 
         AND `value` == 'q';
-``` <!-- ``` -->
+``` 
+
+<!-- ``` -->
 
 returns: "How many people live at this address?"
 
@@ -815,6 +832,7 @@ Field         |  Description
  ``value``    |  Range of values ('q' = survey question)
  ``meaning``  |  Explanation of corresponding entry
 
+\newpage
 
 Resources
 =========
@@ -854,8 +872,5 @@ Meter project developments are disseminated online via:
 -   [Academia/PhilippGrunewald](https://oxford.academia.edu/PhilippGr%C3%BCnewald)
 -   [Energy-use.org](http://www.energy-use.org)
 
-This documentation is maintained on
-
--   [GitHub MeterData
-    repository](https://github.com/philgrunewald/MeterData).
+This documentation is maintained on [GitHub MeterData repository](https://github.com/philgrunewald/MeterData).
 
