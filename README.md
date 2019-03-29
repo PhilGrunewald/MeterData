@@ -1,6 +1,6 @@
 % METER data
 % Data Documentation
-% April 2019
+% March 2019
 
 Introduction
 ============
@@ -64,7 +64,7 @@ The data collection process involves the following stages:
 #. [Household Survey](#household-survey)
 #. [Participation](#participation)
     #. [Individual Survey](#individual-survey)
-    #. [Activity Recording](#activity-recording)
+    #. [Activity Recorder](#activity-recorder)
     #. [Electricity Recording](#electricity-recording)
 #. [Follow-up Surveys](#follow-up-surveys)
 
@@ -195,7 +195,7 @@ Before January 2017 participants received a paper diary instead of an activity r
 Activity and electricity recordings are taken over a 28 hour period starting at 5pm, thus capturing two of the typically most energy intensive periods between 5pm and 7pm. We refer to this 28 hour period as a 'study day' (even though it has 4 more hours than a day).
 
 
-Activity recording
+Activity recorder
 ------------------
 
 ![The activity recorder (aMeter)](images/aMeter.png)
@@ -592,51 +592,59 @@ Field                 | Question / options                                      
 &nbsp;                | Female                                                                       | 1
 &nbsp;                | Male                                                                         | 2
 &nbsp;                | Other                                                                        | 3
+&nbsp;                | Skip                                                                         | null
 ``Age_range``         | What age group are you?                                                      | &nbsp;
 &nbsp;                | 8-19                                                                         | 1
 &nbsp;                | 19-34                                                                        | 2
 &nbsp;                | 35-50                                                                        | 3
 &nbsp;                | 50-70                                                                        | 4
 &nbsp;                | Over 70                                                                      | 5
-&nbsp;                | Skip                                                                         | 6
+&nbsp;                | Skip                                                                         | null
 ``Occupation``        | What is your occupation?                                                     | &nbsp;
 &nbsp;                | Student                                                                      | 1
 &nbsp;                | Employed                                                                     | 2
 &nbsp;                | Self-employed                                                                | 3
 &nbsp;                | Volunteer/unpaid work                                                        | 4
 &nbsp;                | Unemployed/retired                                                           | 5
-&nbsp;                | Skip                                                                         | 6
+&nbsp;                | Skip                                                                         | null
 ``WorkingHours``      | How many hours do you work per week?                                         | &nbsp;
 &nbsp;                | None                                                                         | 1
 &nbsp;                | 1-15                                                                         | 2
 &nbsp;                | 16-30                                                                        | 3
 &nbsp;                | 31-45                                                                        | 4
-&nbsp;                | Over 45                                                                      | 6
-&nbsp;                | Skip                                                                         | 6
+&nbsp;                | Over 45                                                                      | 5
+&nbsp;                | Skip                                                                         | null
 ``WorkRegularity``    | Are these hours always the same?                                             | &nbsp;
 &nbsp;                | Always the same                                                              | 1
 &nbsp;                | Variable to suit work                                                        | 2
 &nbsp;                | Flexible to suit me                                                          | 3
-&nbsp;                | Skip                                                                         | 4
+&nbsp;                | Skip                                                                         | null
 ``WorkHome``          | How often do you work from home?                                             | &nbsp;
 &nbsp;                | Never                                                                        | 1
 &nbsp;                | Rarely                                                                       | 2
 &nbsp;                | Sometimes                                                                    | 3
 &nbsp;                | Often                                                                        | 4
 &nbsp;                | Always                                                                       | 5
-&nbsp;                | Skip                                                                         | 6
+&nbsp;                | Skip                                                                         | null
+``EnergyInterest``    | How interested are you in energy issues?                                     | &nbsp;
+&nbsp;                | Very Interested                                                              | 1
+&nbsp;                | Interested                                                                   | 2
+&nbsp;                | Somewhat                                                                     | 3
+&nbsp;                | Not very much                                                                | 4
+&nbsp;                | Not at all                                                                   | 5
+&nbsp;                | Skip                                                                         | null
 ``BillContributer``   | Do you pay the electricity bills?                                            | &nbsp;
 &nbsp;                | Yes, I do                                                                    | 1
 &nbsp;                | I contribute                                                                 | 2
 &nbsp;                | I don't                                                                      | 3
-&nbsp;                | Other/skip                                                                   | 4
+&nbsp;                | Other/skip                                                                   | null
 ``Income``            | Roughly, what is your annual income?                                         | &nbsp;
 &nbsp;                | £0 - £10,000                                                                 | 1
 &nbsp;                | up to £20,000                                                                | 2
 &nbsp;                | up to £30,000                                                                | 3
 &nbsp;                | up to £45,000                                                                | 4
 &nbsp;                | Over £45,000                                                                 | 5
-&nbsp;                | Skip                                                                         | 6
+&nbsp;                | Skip                                                                         | null
 ``UseDishwasher``     | In the last 7 days, did you personally use a Dishwasher?                     | &nbsp;
 &nbsp;                | I didn't                                                                     | 1
 &nbsp;                | Once                                                                         | 2
@@ -700,13 +708,6 @@ Field                 | Question / options                                      
 &nbsp;                | 1h or less                                                                   | 4
 &nbsp;                | 3h or less                                                                   | 5
 &nbsp;                | Over 3h                                                                      | 6
-``EnergyInterest``    | How interested are you in energy issues?                                     | &nbsp;
-&nbsp;                | Very Interested                                                              | 1
-&nbsp;                | Interested                                                                   | 2
-&nbsp;                | Somewhat                                                                     | 3
-&nbsp;                | Not very much                                                                | 4
-&nbsp;                | Not at all                                                                   | 5
-&nbsp;                | Skip                                                                         | 6
 
 
 Activities
@@ -758,7 +759,6 @@ Field                 | Description /Options                            | Values
 &nbsp;                | So so                                           | 3
 &nbsp;                | Somewhat                                        | 4
 &nbsp;                | Very much                                       | 5
-&nbsp;                | 'undefined'                                     | 0
 ``path``              | Entry sequence                                  | tuc  ID list
 
 Default value is 0, unless this is an option, as for ``people``, where the default is '-1' instead.
