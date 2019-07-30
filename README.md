@@ -1,11 +1,11 @@
 % METER data
 % Data Documentation
-% March 2019
+% July 2019
 
 Introduction
 ============
 
-Measuring and Evaluating Time-use and Electricity-use Relationships (METER) is a project collecting and depositing data on household electricity use, activities and other contextual and demographic information. This documentation explains the data collection process, the structure of the data and how to use it.
+Measuring and Evaluating Time-use and Electricity-use Relationships (METER) is a project collecting and depositing data on household electricity use, activities and other contextual and demographic information. Data is available from [UK Household Electricity and Activity Survey, 2016-2019](http://doi.org/10.5255/UKDA-SN-8475-1) @Meter19. This documentation explains the data collection process, the structure of the data and how to use it.
 
 METER is a 5 year research project at the University of Oxford's Environmental Change Institute. It is funded by the Engineering and Physical Sciences Research Council (EPSRC) from 2015-2020 under grant number [EP/M024652/1](https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/M024652/1).
 
