@@ -23,6 +23,8 @@ Marina  6 Sep 2019  Profile span all readings
 
 Marina  6 Sep 2019  Reading paper compare CREST and Meter profiles
                     waiting for Reading profiles
+        7 Oct 2019  Timur's child was born one month earlier: 
+                    he is on leave until end of October. He set a deadline for himself to get the profiles done by 1st of November
 
 Aven    6 Sep 2019  Source trophy for Osney winner
                     Marina to continue??
