@@ -9,10 +9,15 @@ Owner   Issued      Task
 ------------------------
 Phil    3 Oct 2019  To look at the continuous profile vis - 
                     it's a blend of profile and browser-based vis; what needs to be added/taken away, or modified?
+Phil    7 Oct 2019  To arrange Skype with Marina, to talk about a) the vis, 
+                    b) prelim Osney activities' analysis, c) potential visit,
+                    d) gender paper?
 
 Phil    12 Sep 2019 Gender paper
 
 Marina  12 Sep 2019 Run WOSC analysis on Osney
+        7 Oct 2019  Ran initial activities analysis to 
+                    corroborate WOSC findings. Results in output/Osney, graphs + .md file. Prelim conclusion: in terms of the 'before', 'after', 'during' bar plots - not sure Osney provided enough data. 
 
 Phil    6 Sep 2019  Invite Osney to event
                     Waiting for Mim for date
