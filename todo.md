@@ -7,6 +7,8 @@ Open (in loose order of priority)
 
 ID  Owner   Issued      Task
 ----------------------------
+10  PG/MD   8 Oct 2019  fix physical meeting
+
 9   Marina  8 Oct 2019  web [continuous_profile] app/profile_continuous.php
                         can you suggest _GET values for testing?
                         on load: zoom window to jump to data (to avoid looking at a blank zoom window)
@@ -26,6 +28,7 @@ ID  Owner   Issued      Task
                         Waiting for Mim for date
 
 1   Aven    6 Sep 2019  Source trophy for Osney winner
+                        Wait for winter study TBC
                         Marina to continue??
 
 Closed
