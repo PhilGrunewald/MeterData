@@ -41,6 +41,7 @@ On Hold
 
 Closed
 ======
+12  Marina  16 Oct 2019 Update DB to have only one idHH for each WOSC contact. I chose the unique idHH to be the idHH of the latest run with good electricity (or the latest run generally, for the household that never managed to give us good electricity). I updated the idHH in the Meta and the Run table accordingly, and deleted the HH entries in the Household table belonging to the 'extra' households. In case something went wrong, we can always restored the data either from our backups or from the deposited dataset that included WOSC. The .csv file with 'idContact, oldHH, newHH' columns is pushed to the MeterData repository. It keeps track of what was renamed.
 
 5   Marina  12 Sep 2019 Run WOSC analysis on Osney
             7 Oct 2019  MD: See Analysis [mpdev] output/Osney/Osney.md and scripts/osney_wosc_comparison_new.py
