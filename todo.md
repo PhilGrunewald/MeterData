@@ -7,22 +7,30 @@ Open (in loose order of priority)
 
 ID  Owner   Issued      Task
 ----------------------------
+
+11  PG      15 Oct 2019 tell HR to arrange contract with MD - done
+    MD      16 Oct 2019 arrange contract with HR
+
 10  PG/MD   8 Oct 2019  fix physical meeting
 
 9   Marina  8 Oct 2019  web [continuous_profile] app/profile_continuous.php
-                        can you suggest _GET values for testing?
+                        send 2-3 URLs as standard tests to discuss appearance
                         on load: zoom window to jump to data (to avoid looking at a blank zoom window)
                         zoom window: less tall, display more hours? (let's discuss)
+            15 Oct 2019 max 8 activity icons vertically. If more [...] icon and show in tooltip
 
 6   Phil    12 Sep 2019 Gender paper
-
-5   Marina  12 Sep 2019 Run WOSC analysis on Osney
-            7 Oct 2019  MD: See Analysis [mpdev] output/Osney/Osney.md and scripts/osney_wosc_comparison_new.py
-                        PG: to be discussed
+            16 Oct 2019 identify top 5 activities of difference
+                        difference in reporting frequency
+                        difference in timing
+                        difference in simultaneous activities
 
 2   Marina  6 Sep 2019  Reading paper compare CREST and Meter profiles
                         waiting for Reading profiles
             7 Oct 2019  Timur on leave - deadline 1st of November
+
+On Hold
+=======
 
 4   Phil    6 Sep 2019  Invite Osney to event
                         Waiting for Mim for date
@@ -33,6 +41,9 @@ ID  Owner   Issued      Task
 
 Closed
 ======
+
+5   Marina  12 Sep 2019 Run WOSC analysis on Osney
+            7 Oct 2019  MD: See Analysis [mpdev] output/Osney/Osney.md and scripts/osney_wosc_comparison_new.py
 
 7   Phil    7 Oct 2019  MD: To arrange Skype with Marina, to talk about a) the vis, b) prelim Osney activities' analysis, c) potential visit, d) gender paper?
                         PG: email 8 Oct 2019 - suggest Mondays 3pm
