@@ -8,6 +8,8 @@ Open (in loose order of priority)
 ID  Owner   Issued      Task
 ----------------------------
 
+14  MD      21 Oct 2019 Assign new IDs for US households
+
 13  MD      21 Oct 2019 Osney WOSC paper concept
                         Analysis/scripts/effect_intervention_demand.py
 
