@@ -1,37 +1,31 @@
 Urgent
 ======
 
-
 Open (in loose order of priority)
 =================================
 
 ID  Owner   Issued      Task
 ----------------------------
 
-14  MD      21 Oct 2019 Assign new IDs for US households
-
 13  MD      21 Oct 2019 Osney WOSC paper concept
                         Analysis/scripts/effect_intervention_demand.py
-
-12  MD      21 Oct 2019 assign HH 1 a new ID for US trials
-
-11  PG      15 Oct 2019 tell HR to arrange contract with MD - done
-    MD      16 Oct 2019 arrange contract with HR
-    MD      21 Oct 2019 email Rich re extra month
+                        shift or reduction in demand?
 
 10  PG/MD   8 Oct 2019  fix physical meeting
                         perhaps late November?
 
-9   Marina  21 Oct 2019 add clockface at bottom of graph
-                        limit height to 3/4 profile
-                        tooltip for all
-                        icons transparent
-                        fix to half hour slots
-            8 Oct 2019  web [continuous_profile] app/profile_continuous.php
-                        send 2-3 URLs as standard tests to discuss appearance
-                        on load: zoom window to jump to data (to avoid looking at a blank zoom window)
-                        zoom window: less tall, display more hours? (let's discuss)
-            15 Oct 2019 max 8 activity icons vertically. If more [...] icon and show in tooltip
+9   Marina  21 Oct 2019 add am/pm to clockface
+                        if mID provided make icon stand out
+                        display name if UserName not NULL
+                        make zoom section obvious in top window
+                        align date to middle of period
+                        add clockface at bottom of graph - done
+                        limit height to 3/4 profile - done
+                        tooltip for all - done
+                        icons transparent -done
+                        fix to half hour slots - done
+                        on load: zoom window to jump to data - done
+            15 Oct 2019 max 8 activity icons vertically - done
 
 6   Phil    12 Sep 2019 Gender paper
             16 Oct 2019 identify top 5 activities of difference
@@ -57,7 +51,16 @@ On Hold
 Activity log
 ============
 
+14  MD      21 Oct 2019 Assign new IDs for US households
+
+12  MD      21 Oct 2019 assign HH 1 a new ID for US trials
+
 12  Marina  16 Oct 2019 Update DB to have only one idHH for each WOSC contact. I chose the unique idHH to be the idHH of the latest run with good electricity (or the latest run generally, for the household that never managed to give us good electricity). I updated the idHH in the Meta and the Run table accordingly, and deleted the HH entries in the Household table belonging to the 'extra' households. In case something went wrong, we can always restored the data either from our backups or from the deposited dataset that included WOSC. The .csv file with 'idContact, oldHH, newHH' columns is pushed to the MeterData repository. It keeps track of what was renamed.
+
+11  PG      15 Oct 2019 tell HR to arrange contract with MD - done
+    MD      16 Oct 2019 arrange contract with HR
+    MD      21 Oct 2019 email Rich re extra month
+
 
 5   Marina  12 Sep 2019 Run WOSC analysis on Osney
             7 Oct 2019  MD: See Analysis [mpdev] output/Osney/Osney.md and scripts/osney_wosc_comparison_new.py
