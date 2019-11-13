@@ -11,14 +11,14 @@ ID  Owner   Issued      Task
                         Analysis/scripts/effect_intervention_demand.py
                         shift or reduction in demand?
 
-10  PG/MD   8 Oct 2019  fix physical meeting
-                        perhaps late November?
+10  PG/MD   8 Oct 2019  fix physical meeting ~ 12 Dec
 
-9   Marina  21 Oct 2019 add am/pm to clockface
+9   Marina  21 Oct 2019 
                         if mID provided make icon stand out
-                        display name if UserName not NULL
-                        make zoom section obvious in top window
-                        align date to middle of period
+                        add am/pm to clockface - done
+                        display name if UserName not NULL - done
+                        make zoom section obvious in top window -done
+                        align date to middle of period -done
                         add clockface at bottom of graph - done
                         limit height to 3/4 profile - done
                         tooltip for all - done
